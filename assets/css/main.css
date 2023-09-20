@@ -95,6 +95,20 @@ section {
   margin-bottom: 0;
 }
 
+/* Typewriter Font */
+.hero .hero-subtitle {
+  color: #43aee0;
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .hero .hero-subtitle {
+    font-size: 2rem;
+  }
+}
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -183,6 +197,51 @@ section {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
+}
+
+/* Whataspp Fly Button  */
+
+.whatsapp-button {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px; /* Adjust the position as needed */
+  bottom: 65px;
+  z-index: 99999;
+  background: #25d366; /* WhatsApp green color */
+  width: 140px; /* Adjust the width to accommodate the message */
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: space-between; /* Align items horizontally */
+  align-items: center; /* Align items vertically */
+  padding: 0 10px; /* Add padding to separate message and icon */
+}
+
+.whatsapp-button i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.whatsapp-button:hover {
+  background: #128c7e; /* Darker green on hover */
+  color: #fff;
+}
+
+/* Show the WhatsApp button when active */
+.whatsapp-button.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.whatsapp-button .whatsapp-message {
+  color: #fff;
+  font-size: 14px; /* Adjust the font size */
+  line-height: 1;
+  text-align: left; /* Align the message to the left */
+  margin-right: 10px;
 }
 
 /*--------------------------------------------------------------
