@@ -784,6 +784,7 @@ section {
   margin-left: 50px;
 }
 
+
 .counts .content .count-box p {
   padding: 15px 0 0 0;
   margin: 0 0 0 50px;
@@ -807,7 +808,8 @@ section {
 }
 
 .counts .image {
-  background: url("assets/img/Coolze logo.png") center center no-repeat;
+  /* url("assets/img/contact-header.jpg")  */
+  background: center center no-repeat;
   background-size: cover;
   min-height: 400px;
 }
@@ -826,6 +828,11 @@ section {
   .counts .image img {
     max-width: 100%;
   }
+}
+
+.small-image {
+  width: 500px; /* Adjust to your desired width */
+  height: auto; /* Automatically adjust the height while maintaining aspect ratio */
 }
 
 
@@ -897,7 +904,36 @@ section {
   font-size: 14px;
 }
 
+/*--------------------------------------------------------------
+# Brand
+--------------------------------------------------------------*/
+.brands .brands-slider .swiper-slide img { /* Update class names for the new "brands" section */
+  opacity: 1;
+  transition: 0.3s;
+  width: auto; /* Adjust the width as needed */
+  height: 1.3cm; /* Maintain aspect ratio */
+}
 
+.brands .brands-slider .swiper-slide img:hover { /* Update class names for the new "brands" section */
+  opacity: 0.6;
+}
+
+.brands .brands-slider .swiper-pagination { /* Update class names for the new "brands" section */
+  margin-top: 20px;
+  position: relative;
+}
+
+.brands .brands-slider .swiper-pagination .swiper-pagination-bullet { /* Update class names for the new "brands" section */
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #4154f1;
+}
+
+.brands .brands-slider .swiper-pagination .swiper-pagination-bullet-active { /* Update class names for the new "brands" section */
+  background-color: #4154f1;
+}
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
