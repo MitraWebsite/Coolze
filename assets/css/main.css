@@ -12,9 +12,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Montserrat", sans-serif;
   --font-secondary: "Raleway", sans-serif;
 }
@@ -29,53 +27,6 @@
 /* Smooth scroll behavior */
 :root {
   scroll-behavior: smooth;
-}
-
-/*--------------------------------------------------------------
-# Tambahan
---------------------------------------------------------------*/
-
-.whatsapp-button {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px; /* Adjust the position as needed */
-  bottom: 65px;
-  z-index: 99999;
-  background: #25d366; /* WhatsApp green color */
-  width: 140px; /* Adjust the width to accommodate the message */
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
-  display: flex;
-  justify-content: space-between; /* Align items horizontally */
-  align-items: center; /* Align items vertically */
-  padding: 0 10px; /* Add padding to separate message and icon */
-}
-
-.whatsapp-button i {
-  font-size: 24px;
-  color: #fff;
-  line-height: 0;
-}
-
-.whatsapp-button:hover {
-  background: #128c7e; /* Darker green on hover */
-  color: #fff;
-}
-
-/* Show the WhatsApp button when active */
-.whatsapp-button.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-.whatsapp-button .whatsapp-message {
-  color: #fff;
-  font-size: 14px; /* Adjust the font size */
-  line-height: 1;
-  text-align: left; /* Align the message to the left */
-  margin-right: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -158,6 +109,7 @@ section {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -204,11 +156,11 @@ section {
   text-decoration: underline;
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
   color: #fff;
@@ -247,8 +199,6 @@ section {
   visibility: visible;
   opacity: 1;
 }
-
-/* Whataspp Fly Button  */
 
 .whatsapp-button {
   position: fixed;
@@ -292,7 +242,6 @@ section {
   text-align: left; /* Align the message to the left */
   margin-right: 10px;
 }
-
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -414,7 +363,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover > a {
+  .navbar li:hover>a {
     color: #fff;
   }
 
@@ -450,11 +399,11 @@ section {
 
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover > a {
+  .navbar .dropdown ul li:hover>a {
     color: var(--color-primary);
   }
 
-  .navbar .dropdown:hover > ul {
+  .navbar .dropdown:hover>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -466,7 +415,7 @@ section {
     visibility: hidden;
   }
 
-  .navbar .dropdown .dropdown:hover > ul {
+  .navbar .dropdown .dropdown:hover>ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -479,12 +428,13 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover > ul {
+  .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
   }
 }
 
 @media (min-width: 1280px) {
+
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
@@ -541,7 +491,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover > a {
+  .navbar li:hover>a {
     color: #fff;
   }
 
@@ -554,8 +504,8 @@ section {
     background-color: rgba(20, 35, 51, 0.6);
   }
 
-  .navbar .dropdown > .dropdown-active,
-  .navbar .dropdown .dropdown > .dropdown-active {
+  .navbar .dropdown>.dropdown-active,
+  .navbar .dropdown .dropdown>.dropdown-active {
     display: block;
   }
 
@@ -864,6 +814,7 @@ section {
   font-size: 14px;
 }
 
+
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
@@ -893,12 +844,12 @@ section {
   background-color: #4154f1;
 }
 
+
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8)),
-    url("../img/cta-bg.jpg") center center;
+  background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8)), url("../img/cta-bg.jpg") center center;
   background-size: cover;
   padding: 100px 0;
 }
@@ -1417,10 +1368,7 @@ section {
   position: relative;
 }
 
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -1428,10 +1376,7 @@ section {
   border: 1px solid var(--color-primary);
 }
 
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet-active {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--color-primary);
 }
 
@@ -1454,7 +1399,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
@@ -1498,7 +1443,7 @@ section {
   right: 0;
 }
 
-.contact .info-item + .info-item {
+.contact .info-item+.info-item {
   margin-top: 40px;
 }
 
@@ -1547,7 +1492,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -1596,7 +1541,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
+.contact .php-email-form button[type=submit] {
   background: #1f98d1;
   border: 0;
   padding: 12px 40px;
@@ -1604,7 +1549,7 @@ section {
   transition: 0.4s;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
+.contact .php-email-form button[type=submit]:hover {
   background: var(--color-primary);
 }
 
@@ -1630,7 +1575,7 @@ section {
   padding-bottom: 30px;
 }
 
-.blog .posts-list article + article {
+.blog .posts-list article+article {
   margin-top: 60px;
 }
 
@@ -1669,7 +1614,7 @@ section {
   margin: 0;
 }
 
-.blog .posts-list .meta-top ul li + li {
+.blog .posts-list .meta-top ul li+li {
   padding-left: 20px;
 }
 
@@ -1778,7 +1723,7 @@ section {
   margin: 0;
 }
 
-.blog .blog-details .meta-top ul li + li {
+.blog .blog-details .meta-top ul li+li {
   padding-left: 20px;
 }
 
@@ -1837,7 +1782,7 @@ section {
   display: inline-block;
 }
 
-.blog .blog-details .meta-bottom .tags li + li::before {
+.blog .blog-details .meta-bottom .tags li+li::before {
   padding-right: 6px;
   color: var(--color-default);
   content: ",";
@@ -1896,7 +1841,7 @@ section {
   color: var(--color-secondary);
 }
 
-.blog .sidebar .sidebar-item + .sidebar-item {
+.blog .sidebar .sidebar-item+.sidebar-item {
   margin-top: 40px;
 }
 
@@ -1907,14 +1852,14 @@ section {
   position: relative;
 }
 
-.blog .sidebar .search-form form input[type="text"] {
+.blog .sidebar .search-form form input[type=text] {
   border: 0;
   padding: 4px;
   border-radius: 4px;
   width: calc(100% - 40px);
 }
 
-.blog .sidebar .search-form form input[type="text"]:focus {
+.blog .sidebar .search-form form input[type=text]:focus {
   outline: none;
 }
 
@@ -1948,7 +1893,7 @@ section {
   padding: 0;
 }
 
-.blog .sidebar .categories ul li + li {
+.blog .sidebar .categories ul li+li {
   padding-top: 10px;
 }
 
@@ -1973,7 +1918,7 @@ section {
   padding: 20px;
 }
 
-.blog .sidebar .recent-posts .post-item + .post-item {
+.blog .sidebar .recent-posts .post-item+.post-item {
   margin-top: 15px;
 }
 
