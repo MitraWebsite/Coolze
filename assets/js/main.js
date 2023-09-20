@@ -148,6 +148,7 @@ new Swiper('.clients-slider', {
     selector: '.glightbox'
   });
 
+  
   /**
    * Init swiper slider with 1 slide at once in desktop view
    */
@@ -240,6 +241,11 @@ new Swiper('.clients-slider', {
   }
 
   /**
+ * Initiate Pure Counter 
+ */
+  new PureCounter();
+
+  /**
    * Animation on scroll function and init
    */
   function aos_init() {
@@ -273,4 +279,6 @@ new Swiper('.clients-slider', {
     });
   }
 
+
+ 
 });
