@@ -596,7 +596,7 @@ section {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/about-header.jpg") top center;
+  background: url("../img/HVAC/vrv-ac-outside.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 120px 0;
@@ -2334,7 +2334,8 @@ section {
 }
 
 .footer .footer-content {
-  background-color: #f7f9fc;
+  background: var(--color-secondary);
+  /* background-color: #f7f9fc; */
   background-size: contain;
   padding: 60px 0 30px 0;
 }
@@ -2366,7 +2367,8 @@ section {
   font-size: 15px;
   margin-bottom: 0;
   font-family: var(--font-primary);
-  color: var(--color-secondary);
+  color: #f7f9fc;
+  /* color: var(--color-secondary); */
 }
 
 .footer .footer-content .social-links a {
@@ -2393,7 +2395,8 @@ section {
 .footer .footer-content h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #29486a;
+  color: #f7f9fc;
+  /* color: #29486a; */
   position: relative;
   padding-bottom: 12px;
 }
@@ -2410,7 +2413,8 @@ section {
 
 .footer .footer-content .footer-links ul i {
   margin-right: 2px;
-  color: var(--color-primary);
+  color: #f7f9fc;
+  /* color: var(--color-primary); */
   font-size: 16px;
   line-height: 0;
 }
@@ -2426,7 +2430,8 @@ section {
 }
 
 .footer .footer-content .footer-links ul a {
-  color: #31547c;
+  /* color: #31547c; */
+  color: #f7f9fc;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -2438,17 +2443,19 @@ section {
 
 .footer .footer-content .footer-contact p {
   line-height: 26px;
-  color: var(--color-secondary);
+  color: #f7f9fc;
+  /* color: var(--color-secondary); */
 }
 
 .footer .footer-legal {
-  background: #fff;
+  background: var(--color-secondary);
   padding: 30px 0;
 }
 
 .footer .footer-legal .copyright {
   text-align: center;
-  color: var(--color-secondary);
+  /* color: var(--color-secondary); */
+  color: #f7f9fc;
 }
 
 .footer .footer-legal .credits {
