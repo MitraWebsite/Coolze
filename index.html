@@ -743,7 +743,27 @@
     
   <!-- Extra Vendor -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Initialize PureCounter for each element with the "purecounter" class
+    const counters = document.querySelectorAll(".purecounter");
+    
+    counters.forEach((counter) => {
+      const start = parseInt(counter.getAttribute("data-purecounter-start")) || 0;
+      const end = parseInt(counter.getAttribute("data-purecounter-end")) || 0;
+      const duration = parseInt(counter.getAttribute("data-purecounter-duration")) || 2;
+      
+      const options = {
+        start,
+        end,
+        duration,
+      };
+      
+      const pureCounter = new PureCounter(counter, options);
+      ureCounter.startCounter(); // Use startCounter instead of start
+    });
+  });
+  </script>
     
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

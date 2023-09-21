@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-/**
- * Brands Slider (similar settings with updated class names)
- */
-new Swiper('.brands-slider', { /* Update class name for the new "brands" section */
+  /**
+  * Brands Slider (similar settings with updated class names)
+  */
+  new Swiper('.brands-slider', { /* Update class name for the new "brands" section */
   speed: 400,
   loop: true,
   autoplay: {
@@ -101,12 +101,12 @@ new Swiper('.brands-slider', { /* Update class name for the new "brands" section
       spaceBetween: 120
     }
   }
-});
+  });
 
-/**
+  /**
    * Clients Slider
    */
-new Swiper('.clients-slider', {
+  new Swiper('.clients-slider', {
   speed: 400,
   loop: true,
   autoplay: {
@@ -137,7 +137,7 @@ new Swiper('.clients-slider', {
       spaceBetween: 120
     }
   }
-});
+  });
 
   /**
    * Scroll top button
@@ -278,12 +278,6 @@ new Swiper('.clients-slider', {
   }
 
   /**
- * Initiate Pure Counter 
- */
-
-  // new PureCounter();
-
-  /**
    * Animation on scroll function and init
    */
   function aos_init() {
@@ -318,5 +312,4 @@ new Swiper('.clients-slider', {
   }
 
 
- 
 });
