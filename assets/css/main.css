@@ -118,12 +118,8 @@ section {
 .icon-social {
   list-style: none;
   padding: 0;
-  position: absolute;
-  bottom: -20px;
-  left: 20px;
   display: flex;
   flex-direction: column;
-  align-items: end;
 }
 
 .icon-social li {
@@ -131,24 +127,31 @@ section {
 }
 
 .icon-social img {
-  width: 40px; /* Adjust the size as needed */
+  width: 40px;
   height: auto;
+}
+
+.icon-social a {
+  display: flex;
+  align-items: center;
+}
+
+.icon-social span {
+  margin-left: 10px; /* Add spacing between icon and text */
+}
+
+.button-and-icons-container {
+  position: relative;
+  bottom: -100px;
+  transform: translateX(-50%);
 }
 
 @media (min-width: 768px) {
   .icon-social {
-    flex-direction: row;
-    align-items: center;
-    left: 20px; /* Adjust this value for proper alignment */
-    bottom: 20px; /* Adjust this value for proper alignment */
-  }
-
-  .icon-social li {
-    margin-right: 10px; /* Add spacing between icons */
-    margin-bottom: 0; /* Remove margin for horizontal layout */
-    
+    flex-direction: column;
   }
 }
+
 /*--------------------------------------------------------------
 # End Contact Logo
 --------------------------------------------------------------*/
