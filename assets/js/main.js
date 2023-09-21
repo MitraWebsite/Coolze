@@ -240,25 +240,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Function to update the position of the icon section
-  function updateIconPosition() {
-    const iconList = document.getElementById('iconSocialList');
-    const windowHeight = window.innerHeight;
-    const iconHeight = iconList.clientHeight;
+// Function to update the position of the icon section
+ // Function to update the position of the icon section
+ function updateIconPosition() {
+  const iconList = document.getElementById('iconSocialList');
+  const windowHeight = window.innerHeight;
+  const iconHeight = iconList.clientHeight;
 
-    if (windowHeight > iconHeight) {
-      // Icons fit within the window, position at the bottom
-      iconList.style.bottom = '0';
-    } else {
-      // Icons exceed window height, position accordingly
-      iconList.style.bottom = `${windowHeight - iconHeight}px`;
-    }
+  if (windowHeight > iconHeight) {
+    // Icons fit within the window, position at the bottom
+    iconList.style.bottom = '0';
+  } else {
+    // Icons exceed window height, position accordingly
+    iconList.style.bottom = `${windowHeight - iconHeight}px`;
   }
+}
 
-  // Update the icon position on page load and when the window is resized
-  window.addEventListener('load', updateIconPosition);
-  window.addEventListener('resize', updateIconPosition);
-
+// Update the icon position on page load and when the window is resized
+window.addEventListener('load', updateIconPosition);
+window.addEventListener('resize', updateIconPosition);
 
   /**
    * Porfolio isotope and filter
