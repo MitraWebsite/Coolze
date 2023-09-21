@@ -926,7 +926,7 @@ section {
   opacity: 1;
   transition: 0.3s;
   width: auto; /* Adjust the width as needed */
-  height: 1.3cm; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .brands .brands-slider .swiper-slide img:hover { /* Update class names for the new "brands" section */
