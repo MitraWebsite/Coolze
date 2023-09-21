@@ -552,7 +552,7 @@ section {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/coolze-logo.png") top center;
+  background: url("../img/about-header.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 120px 0;
@@ -573,7 +573,7 @@ section {
 .hero:before {
   position: absolute;
   content: "";
-  background: rgba(27, 47, 69, 0.6);
+  /* background: rgba(27, 47, 69, 0.6); */
   inset: 0;
 }
 
@@ -749,6 +749,12 @@ section {
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
+.counts {
+  width: 100%;
+  background-color: #fff; /* Optionally set a background color */
+  /* Add any other styles you want for the full-width section */
+}
+
 .counts .content {
   padding: 30px 0;
 }
@@ -771,7 +777,7 @@ section {
 .counts .content .count-box i {
   display: block;
   font-size: 36px;
-  color: #ffc451;
+  color: #6165e5;
   float: left;
 }
 
@@ -784,10 +790,20 @@ section {
   margin-left: 50px;
 }
 
+/* Expand count */
+/* .counts .container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.col-xl-7 {
+  width: 100%; 
+} */
+/* End Expand count */
 
 .counts .content .count-box p {
   padding: 15px 0 0 0;
-  margin: 0 0 0 50px;
+  margin: 0px 0 0 50px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   color: #3b3b3b;
@@ -807,11 +823,11 @@ section {
   color: #626262;
 }
 
-.counts .image {
+/* .counts .image {
   background: url("../img/contact-header.jpg")  center center no-repeat;
   background-size: cover;
   min-height: 400px;
-}
+} */
 
 @media (max-width: 991px) {
   .counts .image {
