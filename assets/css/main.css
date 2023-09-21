@@ -112,6 +112,47 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Contact Logo
+--------------------------------------------------------------*/
+/* Add these styles to control the size and positioning of the icons */
+.icon-social {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.icon-social li {
+  margin-bottom: 10px;
+}
+
+.icon-social img {
+  width: 40px; /* Adjust the size as needed */
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .icon-social {
+    flex-direction: row;
+    align-items: center;
+    left: 20px; /* Adjust this value for proper alignment */
+    bottom: 20px; /* Adjust this value for proper alignment */
+  }
+
+  .icon-social li {
+    margin-right: 10px; /* Add spacing between icons */
+    margin-bottom: 0; /* Remove margin for horizontal layout */
+    
+  }
+}
+/*--------------------------------------------------------------
+# End Contact Logo
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
