@@ -281,7 +281,7 @@ new Swiper('.clients-slider', {
  * Initiate Pure Counter 
  */
 
-  new PureCounter();
+  // new PureCounter();
 
   /**
    * Animation on scroll function and init
