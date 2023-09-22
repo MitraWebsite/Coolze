@@ -862,6 +862,113 @@ section {
   }
 } */
 
+/* ------------------------------ */
+/* Service Section - Home Page
+------------------------------*/
+.service .service-item {
+  color: rgba(var(--default-color-rgb), 0.8);
+}
+
+.service .service-item+.service-item {
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .service .service-item+.service-item {
+    flex-direction: column-reverse;
+    margin-top: 60px;
+  }
+}
+
+/* item 2 */
+.service .service-item:nth-child(2) .col-lg-6 {
+  margin-bottom: 80px; /* Add margin to separate image from description */
+}
+
+.service .service-item h3 {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.service .service-item .btn-get-started {
+  background-color: var(--primary-color);
+  color: var(--contrast-color);
+  padding: 8px 30px 10px 30px;
+  border-radius: 4px;
+}
+
+.service .service-item .btn-get-started:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.9);
+}
+
+.service .service-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service .service-item ul li {
+  padding-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.service .service-item ul li:last-child {
+  padding-bottom: 0;
+}
+
+.service .service-item ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: var(--primary-color);
+}
+
+.service .service-item img {
+  border: 6px solid var(--background-color);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.service .service-item .service-img-bg {
+  position: relative;
+  min-height: 500px;
+}
+
+@media (max-width: 640px) {
+  .service .service-item .service-img-bg {
+    min-height: 400px;
+  }
+}
+
+.service .service-item .service-img-bg img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.service .service-item .image-stack {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.service .service-item .image-stack .stack-back {
+  grid-column: 4/-1;
+  grid-row: 1;
+  width: 100%;
+  z-index: 1;
+}
+
+.service .service-item .image-stack .stack-front {
+  grid-row: 1;
+  grid-column: 1/span 8;
+  margin-top: 20%;
+  width: 100%;
+  z-index: 2;
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -900,7 +1007,7 @@ section {
 /*--------------------------------------------------------------
 # Services List Section
 --------------------------------------------------------------*/
-.services-list .service-item {
+/* .services-list .service-item {
   position: relative;
 }
 
@@ -928,7 +1035,7 @@ section {
 .services-list .service-item .description {
   line-height: 24px;
   font-size: 14px;
-}
+} */
 
 /*--------------------------------------------------------------
 # Brand
