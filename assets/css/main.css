@@ -2608,6 +2608,7 @@ section {
 }
 
 .footer .footer-legal {
+  /* background: #fff; */
   background: var(--color-secondary);
   padding: 30px 0;
 }
