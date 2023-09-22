@@ -875,15 +875,29 @@ section {
 
 @media (max-width: 768px) {
   .service .service-item+.service-item {
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     margin-top: 60px;
+  }
+
+  .service .service-item:nth-child(2) {
+    flex-direction: column-reverse; /* Reorder columns for mobile */
   }
 }
 
-/* item 2 */
-.service .service-item:nth-child(2) .col-lg-6 {
-  margin-bottom: 80px; /* Add margin to separate image from description */
+/* extra added item 2 */
+
+/* Add a background color to the second service item */
+/* .service .service-item:nth-child(2) {
+  background-color: var(--color-secondary); 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  color: #fff;
 }
+
+.service .service-item:nth-child(2) .col-lg-6 {
+  margin-bottom: 180px; 
+} */
+/* end item 2 */
 
 .service .service-item h3 {
   font-weight: 700;
