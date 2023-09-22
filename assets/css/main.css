@@ -1825,7 +1825,7 @@ section {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
-  padding: 12px 15px;
+  /* padding: 12px 15px; */
 }
 
 .contact .php-email-form input:focus,
@@ -1863,6 +1863,10 @@ section {
 /* Add spacing between items */
 .contact .row {
   padding: 0; /* Removed padding */
+  /* margin-bottom: 100px; */
+}
+
+.bawahana {
   margin-bottom: 100px;
 }
 
