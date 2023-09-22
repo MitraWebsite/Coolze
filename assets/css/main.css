@@ -884,21 +884,6 @@ section {
   }
 }
 
-/* extra added item 2 */
-
-/* Add a background color to the second service item */
-/* .service .service-item:nth-child(2) {
-  background-color: var(--color-secondary); 
-  border-radius: 10px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-  color: #fff;
-}
-
-.service .service-item:nth-child(2) .col-lg-6 {
-  margin-bottom: 180px; 
-} */
-/* end item 2 */
-
 .service .service-item h3 {
   font-weight: 700;
   font-size: 26px;
@@ -986,6 +971,13 @@ section {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about .content h2 {
+  font-weight: 700;
+  font-size: 50px;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+}
+
 .about .content h3 {
   font-weight: 700;
   font-size: 36px;
@@ -994,8 +986,10 @@ section {
 }
 
 .about .content p {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 30px 0;
-  color: #29486a;
+  color: #365678;
 }
 
 .about .content ul {
@@ -1017,6 +1011,26 @@ section {
   top: -3px;
   color: var(--color-primary);
 }
+
+/* our history */
+.year-highlight {
+  font-display: var(--font-primary);
+  color: #6c67fd; /* Change the color to your preference */
+  font-size: 24px; /* Change the font size to your preference */
+  font-weight: bold; /* Add bold styling if desired */
+  margin-right: 1px; /* Add some spacing to the right of the year */
+}
+
+.brand-logo {
+  display: inline-block;
+  margin-right: 20px; /* Adjust spacing between logos */
+  transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.brand-logo:hover {
+  opacity: 0.7; /* Reduce opacity on hover (you can adjust this value) */
+}
+
 
 /*--------------------------------------------------------------
 # Services List Section
