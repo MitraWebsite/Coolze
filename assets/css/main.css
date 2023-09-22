@@ -596,7 +596,7 @@ section {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background: url("../img/HVAC/vrv-ac-outside.jpg") top center;
   background-size: cover;
   position: relative;
@@ -794,40 +794,28 @@ section {
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
+
 .counts {
-  width: 100%;
-  background-color: var(--color-primary); /* Optionally set a background color */
-  /* Add any other styles you want for the full-width section */
+  background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8)),
+    url("../img/cta-bg.jpg") center center;
+  background-attachment: fixed; /* Keep the background fixed */
+  background-size: cover;
+  padding: 100px 0;
+  margin-top: 80px;
 }
 
-.counts .content {
+/* .counts .content {
   padding: 30px 0;
-}
-
-.counts .content h3 {
-  font-weight: 700;
-  font-size: 34px;
-  color: #151515;
-}
-
-.counts .content p {
-  margin-bottom: 0;
-}
+} */
 
 .count-box .purecounter::after {
   content: "+"; /* Add plus sign */
-  margin-left: 5px; /* Adjust the spacing between the number and the plus sign */
-}
-
-.counts .content .count-box {
-  padding: 20px 0;
-  width: 100%;
 }
 
 .counts .content .count-box i {
   display: block;
-  font-size: 36px;
-  color: #6165e5;
+  font-size: 38px;
+  color: #1ff0ff;
   float: left;
 }
 
@@ -836,43 +824,25 @@ section {
   line-height: 30px;
   display: block;
   font-weight: 700;
-  color: #151515;
+  color: #f7f9fc;
+  text-align: start;
   margin-left: 50px;
 }
 
-/* Expand count */
-/* .counts .container {
-  max-width: 1200px; 
-  margin: 0 auto; 
-}
-
-.col-xl-7 {
-  width: 100%; 
-} */
-/* End Expand count */
-
 .counts .content .count-box p {
   padding: 15px 0 0 0;
-  margin: 0px 0 0 50px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
-  color: #3b3b3b;
+  text-align: start;
+  color: #fff;
+  margin-left: 50px;
 }
 
-.counts .content .count-box a {
-  font-weight: 600;
-  display: block;
-  margin-top: 20px;
-  color: #3b3b3b;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  transition: ease-in-out 0.3s;
+@media (min-width: 1365px) {
+  .count {
+    background-attachment: fixed;
+  }
 }
-
-.counts .content .count-box a:hover {
-  color: #626262;
-}
-
 /* .counts .image {
   background: url("../img/contact-header.jpg")  center center no-repeat;
   background-size: cover;
@@ -880,25 +850,17 @@ section {
 } */
 
 @media (max-width: 991px) {
-  .counts .image {
-    text-align: center;
-  }
-
-  .counts .image img {
-    max-width: 80%;
+  .counts .content .count-box {
+    padding: 15px;
+    /* margin-bottom: 20px; */
   }
 }
 
-@media (max-width: 667px) {
+/* @media (max-width: 667px) {
   .counts .image img {
     max-width: 100%;
   }
-}
-
-.small-image {
-  width: 500px; /* Adjust to your desired width */
-  height: auto; /* Automatically adjust the height while maintaining aspect ratio */
-}
+} */
 
 /*--------------------------------------------------------------
 # About Section
@@ -995,7 +957,6 @@ section {
   /* Update class names for the new "brands" section */
   margin-top: 20px;
   position: relative;
-  background-color: #165a7c;
 }
 
 .brands .brands-slider .swiper-pagination .swiper-pagination-bullet {
@@ -1026,7 +987,7 @@ section {
 .clients .clients-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
-  background-color: #165a7c;
+  /* background-color: #165a7c; */
 }
 
 .clients .clients-slider .swiper-pagination .swiper-pagination-bullet {
@@ -1049,6 +1010,7 @@ section {
     url("../img/cta-bg.jpg") center center;
   background-size: cover;
   padding: 100px 0;
+  margin-top: 80px;
 }
 
 @media (min-width: 1365px) {
@@ -2343,11 +2305,16 @@ section {
   font-size: 14px;
 }
 
-.footer .footer-content {
+/* .footer .footer-content {
   background: var(--color-secondary);
-  /* background-color: #f7f9fc; */
+  background-color: #f7f9fc;
   background-size: contain;
   padding: 60px 0 30px 0;
+} */
+
+.footer .footer-content {
+  background: var(--color-secondary);
+  padding: 30px 0;
 }
 
 .footer .footer-content .footer-info {
@@ -2359,10 +2326,13 @@ section {
   margin-bottom: 25px;
 }
 
-.footer .footer-content .footer-info .logo img {
+/* .footer .footer-content .footer-info .logo img {
   max-height: 120px;
   width: auto;
   margin-right: 3px;
+} */
+.footer .footer-content .footer-info .logo img {
+  max-width: 100%;
 }
 
 .footer .footer-content .footer-info .logo span {
