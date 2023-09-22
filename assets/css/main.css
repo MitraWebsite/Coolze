@@ -604,6 +604,12 @@ section {
   z-index: 3;
 }
 
+@media (max-height: 740px) {
+  .hero {
+    height: 145vh;
+  }
+}
+
 @media (min-width: 1034px) {
   .hero:after {
     position: absolute;
