@@ -1,19 +1,19 @@
 /**
-* Template Name: Nova
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-document.addEventListener('DOMContentLoaded', () => {
+ * Template Name: Nova
+ * Updated: Sep 18 2023 with Bootstrap v5.3.2
+ * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
+document.addEventListener("DOMContentLoaded", () => {
   "use strict";
 
   /**
    * Preloader
    */
-  const preloader = document.querySelector('#preloader');
+  const preloader = document.querySelector("#preloader");
   if (preloader) {
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       preloader.remove();
     });
   }
@@ -21,280 +21,305 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Sticky header on scroll
    */
-  const selectHeader = document.querySelector('#header');
+  const selectHeader = document.querySelector("#header");
   if (selectHeader) {
-    document.addEventListener('scroll', () => {
-      window.scrollY > 100 ? selectHeader.classList.add('sticked') : selectHeader.classList.remove('sticked');
+    document.addEventListener("scroll", () => {
+      window.scrollY > 30
+        ? selectHeader.classList.add("sticked")
+        : selectHeader.classList.remove("sticked");
     });
   }
 
   /**
    * Mobile nav toggle
    */
-  const mobileNavShow = document.querySelector('.mobile-nav-show');
-  const mobileNavHide = document.querySelector('.mobile-nav-hide');
+  const mobileNavShow = document.querySelector(".mobile-nav-show");
+  const mobileNavHide = document.querySelector(".mobile-nav-hide");
 
-  document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
-    el.addEventListener('click', function(event) {
+  document.querySelectorAll(".mobile-nav-toggle").forEach((el) => {
+    el.addEventListener("click", function (event) {
       event.preventDefault();
       mobileNavToogle();
-    })
+    });
   });
 
   function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavShow.classList.toggle('d-none');
-    mobileNavHide.classList.toggle('d-none');
+    document.querySelector("body").classList.toggle("mobile-nav-active");
+    mobileNavShow.classList.toggle("d-none");
+    mobileNavHide.classList.toggle("d-none");
   }
 
   /**
    * Toggle mobile nav dropdowns
    */
-  const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
+  const navDropdowns = document.querySelectorAll(".navbar .dropdown > a");
 
-  navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
-      if (document.querySelector('.mobile-nav-active')) {
+  navDropdowns.forEach((el) => {
+    el.addEventListener("click", function (event) {
+      if (document.querySelector(".mobile-nav-active")) {
         event.preventDefault();
-        this.classList.toggle('active');
-        this.nextElementSibling.classList.toggle('dropdown-active');
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("dropdown-active");
 
-        let dropDownIndicator = this.querySelector('.dropdown-indicator');
-        dropDownIndicator.classList.toggle('bi-chevron-up');
-        dropDownIndicator.classList.toggle('bi-chevron-down');
+        let dropDownIndicator = this.querySelector(".dropdown-indicator");
+        dropDownIndicator.classList.toggle("bi-chevron-up");
+        dropDownIndicator.classList.toggle("bi-chevron-down");
       }
-    })
+    });
   });
 
-
   /**
-  * Brands Slider (similar settings with updated class names)
-  */
-  new Swiper('.brands-slider', { /* Update class name for the new "brands" section */
-  speed: 400,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false
-  },
-  slidesPerView: 'auto',
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 40
+   * Brands Slider (similar settings with updated class names)
+   */
+  new Swiper(".brands-slider", {
+    /* Update class name for the new "brands" section */ speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
     },
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 60
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
     },
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 80
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 60,
+      },
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 80,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 100,
+      },
     },
-    992: {
-      slidesPerView: 3,
-      spaceBetween: 100
-    }
-  }
   });
 
   /**
    * Clients Slider
    */
-  new Swiper('.clients-slider', {
-  speed: 400,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false
-  },
-  slidesPerView: 'auto',
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 40
+  new Swiper(".clients-slider", {
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
     },
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 60
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
     },
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 80
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 60,
+      },
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 80,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 120,
+      },
     },
-    992: {
-      slidesPerView: 3,
-      spaceBetween: 120
-    }
-  }
   });
 
   /**
    * Scroll top button
    */
-  const scrollTop = document.querySelector('.scroll-top');
+  const scrollTop = document.querySelector(".scroll-top");
   if (scrollTop) {
-    const togglescrollTop = function() {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
-    window.addEventListener('load', togglescrollTop);
-    document.addEventListener('scroll', togglescrollTop);
-    scrollTop.addEventListener('click', window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    }));
+    const togglescrollTop = function () {
+      window.scrollY > 100
+        ? scrollTop.classList.add("active")
+        : scrollTop.classList.remove("active");
+    };
+    window.addEventListener("load", togglescrollTop);
+    document.addEventListener("scroll", togglescrollTop);
+    scrollTop.addEventListener(
+      "click",
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    );
   }
 
   /**
- * Scroll top and WhatsApp buttons
- */
-  const whatsappButton = document.querySelector('.whatsapp-button');
-  
+   * Scroll top and WhatsApp buttons
+   */
+  const whatsappButton = document.querySelector(".whatsapp-button");
+
   if (scrollTop && whatsappButton) {
-    const toggleButtons = function() {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-      whatsappButton.classList.add('active'); // Always make the WhatsApp button active
+    const toggleButtons = function () {
+      window.scrollY > 100
+        ? scrollTop.classList.add("active")
+        : scrollTop.classList.remove("active");
+      whatsappButton.classList.add("active"); // Always make the WhatsApp button active
     };
-  
-    window.addEventListener('load', toggleButtons);
-    document.addEventListener('scroll', toggleButtons);
-  
-    scrollTop.addEventListener('click', function() {
+
+    window.addEventListener("load", toggleButtons);
+    document.addEventListener("scroll", toggleButtons);
+
+    scrollTop.addEventListener("click", function () {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     });
   }
-
 
   /**
    * Initiate glightbox
    */
   const glightbox = GLightbox({
-    selector: '.glightbox'
+    selector: ".glightbox",
   });
 
-  
   /**
    * Init swiper slider with 1 slide at once in desktop view
    */
-  new Swiper('.slides-1', {
+  new Swiper(".slides-1", {
     speed: 600,
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 
   /**
    * Init swiper slider with 3 slides at once in desktop view
    */
-  new Swiper('.slides-3', {
+  new Swiper(".slides-3", {
     speed: 600,
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 40
+        spaceBetween: 40,
       },
 
       1200: {
         slidesPerView: 3,
-      }
-    }
+      },
+    },
   });
 
+  // Function to update the position of the icon section
+  function updateIconPosition() {
+    const iconList = document.getElementById("iconSocialList");
+    const windowHeight = window.innerHeight;
+    const iconHeight = iconList.clientHeight;
 
- // Function to update the position of the icon section
- function updateIconPosition() {
-  const iconList = document.getElementById('iconSocialList');
-  const windowHeight = window.innerHeight;
-  const iconHeight = iconList.clientHeight;
-
-  if (windowHeight > iconHeight) {
-    // Icons fit within the window, position at the bottom
-    iconList.style.bottom = '0';
-  } else {
-    // Icons exceed window height, position accordingly
-    iconList.style.bottom = `${windowHeight - iconHeight}px`;
+    if (windowHeight > iconHeight) {
+      // Icons fit within the window, position at the bottom
+      iconList.style.bottom = "0";
+    } else {
+      // Icons exceed window height, position accordingly
+      iconList.style.bottom = `${windowHeight - iconHeight}px`;
+    }
   }
-}
 
-// Update the icon position on page load and when the window is resized
-window.addEventListener('load', updateIconPosition);
-window.addEventListener('resize', updateIconPosition);
+  // Update the icon position on page load and when the window is resized
+  window.addEventListener("load", updateIconPosition);
+  window.addEventListener("resize", updateIconPosition);
 
   /**
    * Porfolio isotope and filter
    */
-  let portfolionIsotope = document.querySelector('.portfolio-isotope');
+  let portfolionIsotope = document.querySelector(".portfolio-isotope");
 
   if (portfolionIsotope) {
+    let portfolioFilter = portfolionIsotope.getAttribute(
+      "data-portfolio-filter"
+    )
+      ? portfolionIsotope.getAttribute("data-portfolio-filter")
+      : "*";
+    let portfolioLayout = portfolionIsotope.getAttribute(
+      "data-portfolio-layout"
+    )
+      ? portfolionIsotope.getAttribute("data-portfolio-layout")
+      : "masonry";
+    let portfolioSort = portfolionIsotope.getAttribute("data-portfolio-sort")
+      ? portfolionIsotope.getAttribute("data-portfolio-sort")
+      : "original-order";
 
-    let portfolioFilter = portfolionIsotope.getAttribute('data-portfolio-filter') ? portfolionIsotope.getAttribute('data-portfolio-filter') : '*';
-    let portfolioLayout = portfolionIsotope.getAttribute('data-portfolio-layout') ? portfolionIsotope.getAttribute('data-portfolio-layout') : 'masonry';
-    let portfolioSort = portfolionIsotope.getAttribute('data-portfolio-sort') ? portfolionIsotope.getAttribute('data-portfolio-sort') : 'original-order';
+    window.addEventListener("load", () => {
+      let portfolioIsotope = new Isotope(
+        document.querySelector(".portfolio-container"),
+        {
+          itemSelector: ".portfolio-item",
+          layoutMode: portfolioLayout,
+          filter: portfolioFilter,
+          sortBy: portfolioSort,
+        }
+      );
 
-    window.addEventListener('load', () => {
-      let portfolioIsotope = new Isotope(document.querySelector('.portfolio-container'), {
-        itemSelector: '.portfolio-item',
-        layoutMode: portfolioLayout,
-        filter: portfolioFilter,
-        sortBy: portfolioSort
+      let menuFilters = document.querySelectorAll(
+        ".portfolio-isotope .portfolio-flters li"
+      );
+      menuFilters.forEach(function (el) {
+        el.addEventListener(
+          "click",
+          function () {
+            document
+              .querySelector(
+                ".portfolio-isotope .portfolio-flters .filter-active"
+              )
+              .classList.remove("filter-active");
+            this.classList.add("filter-active");
+            portfolioIsotope.arrange({
+              filter: this.getAttribute("data-filter"),
+            });
+            if (typeof aos_init === "function") {
+              aos_init();
+            }
+          },
+          false
+        );
       });
-
-      let menuFilters = document.querySelectorAll('.portfolio-isotope .portfolio-flters li');
-      menuFilters.forEach(function(el) {
-        el.addEventListener('click', function() {
-          document.querySelector('.portfolio-isotope .portfolio-flters .filter-active').classList.remove('filter-active');
-          this.classList.add('filter-active');
-          portfolioIsotope.arrange({
-            filter: this.getAttribute('data-filter')
-          });
-          if (typeof aos_init === 'function') {
-            aos_init();
-          }
-        }, false);
-      });
-
     });
-
   }
 
   /**
@@ -303,12 +328,12 @@ window.addEventListener('resize', updateIconPosition);
   function aos_init() {
     AOS.init({
       duration: 800,
-      easing: 'slide',
+      easing: "slide",
       once: true,
-      mirror: false
+      mirror: false,
     });
   }
-  window.addEventListener('load', () => {
+  window.addEventListener("load", () => {
     aos_init();
   });
 
@@ -318,18 +343,16 @@ window.addEventListener('resize', updateIconPosition);
   }
 
   // typing header
-  const typed = select('.typed')
+  const typed = select(".typed");
   if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
+    let typed_strings = typed.getAttribute("data-typed-items");
+    typed_strings = typed_strings.split(",");
+    new Typed(".typed", {
       strings: typed_strings,
       loop: true,
       typeSpeed: 40,
       backSpeed: 20,
-      backDelay: 2000
+      backDelay: 2000,
     });
   }
-
-
 });
