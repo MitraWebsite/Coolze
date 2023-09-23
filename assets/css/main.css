@@ -618,6 +618,7 @@ section {
     background: var(--color-secondary);
     top: 0;
     bottom: 0;
+    opacity: 80%;
   }
 }
 
