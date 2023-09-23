@@ -1470,7 +1470,7 @@ section {
 /*--------------------------------------------------------------
 # Documentation Section
 --------------------------------------------------------------*/
-.documentations .testimonial-item {
+.documentations .documentation-item {
   box-sizing: content-box;
   padding: 30px;
   margin: 40px 30px;
