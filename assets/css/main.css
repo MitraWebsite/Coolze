@@ -891,9 +891,13 @@ section {
     flex-direction: column-reverse; /* Reorder columns for mobile */
   }
 
-  /* Just Addedd */
+}
+
+@media (min-width: 769px) {
+  /* Adjust margins for the second service item */
   .service .service-item:nth-child(2) .col-lg-5 {
-    order: 2; /* Change the order to 2 */
+    margin-left: 20px; /* Adjust the left margin as needed */
+    margin-right: 0;  /* Ensure no right margin */
   }
 }
 
@@ -950,13 +954,6 @@ section {
   }
 }
 
-/* Just added */
-@media (min-width: 769px) {
-  /* Reset the order property to its default value for the second service item */
-  .service .service-item:nth-child(2) .col-lg-5 {
-    order: initial; /* Reset the order property */
-  }
-}
 
 .service .service-item .service-img-bg img {
   position: absolute;
