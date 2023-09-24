@@ -893,11 +893,16 @@ section {
 
 }
 
+/* Just Addedd */
 @media (min-width: 769px) {
   /* Adjust margins for the second service item */
   .service .service-item:nth-child(2) .col-lg-5 {
     margin-left: 20px; /* Adjust the left margin as needed */
     margin-right: 0;  /* Ensure no right margin */
+  }
+
+  .service .service-item:nth-child(2) .col-lg-5 {
+    order: 1; /* Set a default order for desktop */
   }
 }
 
