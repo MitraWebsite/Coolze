@@ -1355,19 +1355,19 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Team Section
+# Product Section
 --------------------------------------------------------------*/
-.team .team-member {
+.product .product-item {
   overflow: hidden;
-  background: #fff;
+  background: #ededed;
 }
 
-.team .team-member .member-img {
+.product .product-item .item-img {
   position: relative;
   overflow: hidden;
 }
 
-.team .team-member .social {
+.product .product-item .social {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1381,7 +1381,7 @@ section {
   justify-content: center;
 }
 
-.team .team-member .social a {
+.product .product-item .social a {
   transition: color 0.3s;
   color: #31547c;
   margin: 0 10px;
@@ -1390,46 +1390,50 @@ section {
   justify-content: center;
 }
 
-.team .team-member .social a i {
+.product .product-item .social a i {
   line-height: 0;
 }
 
-.team .team-member .social a:hover {
+.product .product-item .social a:hover {
   color: var(--color-primary);
 }
 
-.team .team-member .social i {
+.product .product-item .social i {
   font-size: 18px;
   margin: 0 2px;
 }
 
-.team .team-member .member-info {
+.product .product-item .item-info {
   padding: 25px 15px 0 15px;
   text-align: center;
 }
 
-.team .team-member .member-info h4 {
+.product .product-item .item-info h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
   color: var(--color-secondary);
 }
 
-.team .team-member .member-info span {
+.product .product-item .item-info span {
   display: block;
   font-size: 13px;
   font-weight: 400;
   color: #6c757d;
 }
 
-.team .team-member .member-info p {
+.product .product-item .item-info p {
   font-style: italic;
   font-size: 14px;
   line-height: 26px;
   color: #6c757d;
 }
 
-.team .team-member:hover .social {
+.product .product-item:hover .social {
+  opacity: 1;
+}
+
+.product .product-item:hover .item-img {
   opacity: 1;
 }
 
