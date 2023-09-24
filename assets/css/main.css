@@ -890,6 +890,11 @@ section {
   .service .service-item:nth-child(2) {
     flex-direction: column-reverse; /* Reorder columns for mobile */
   }
+
+  /* Just Addedd */
+  .service .service-item:nth-child(2) .col-lg-5 {
+    order: 2; /* Change the order to 2 */
+  }
 }
 
 .service .service-item h3 {
@@ -942,6 +947,14 @@ section {
 @media (max-width: 640px) {
   .service .service-item .service-img-bg {
     min-height: 400px;
+  }
+}
+
+/* Just added */
+@media (min-width: 769px) {
+  /* Reset the order property to its default value for the second service item */
+  .service .service-item:nth-child(2) .col-lg-5 {
+    order: initial; /* Reset the order property */
   }
 }
 
