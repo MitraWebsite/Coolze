@@ -604,9 +604,32 @@ section {
   z-index: 3;
 }
 
-@media (max-height: 740px) {
+@media (max-height: 671px) {
+  .hero {
+    height: 285vh;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-height: 750px) {
+  .hero {
+    height: 155vh;
+  }
+}
+@media screen and (max-width: 300px) and (max-height: 750px) {
+  .hero {
+    height: 175vh;
+  }
+}
+@media screen and (max-width: 1281px) and (max-height: 850px) {
   .hero {
     height: 145vh;
+  }
+}
+
+@media (min-width: 1365px) {
+  .hero {
+    height: 110vh;
+    background-attachment: fixed;
   }
 }
 
@@ -637,13 +660,6 @@ section {
 
 .hero .container {
   z-index: 1;
-}
-
-@media (min-width: 1365px) {
-  .hero {
-    height: 110vh;
-    background-attachment: fixed;
-  }
 }
 
 .hero h2 {
