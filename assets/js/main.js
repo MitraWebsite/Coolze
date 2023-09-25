@@ -265,37 +265,39 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", updateIconPosition);
   window.addEventListener("resize", updateIconPosition);
 
-        // Function to get the value of a query parameter from the URL
-        function getQueryParam(param) {
-          const urlParams = new URLSearchParams(window.location.search);
-          return urlParams.get(param);
+  // Function to get the value of a query parameter from the URL
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  // Check if the "filter" query parameter is present in the URL
+  const filterParam = getQueryParam("filter");
+
+  // Check if a filter value is provided and apply it to your products
+  if (filterParam) {
+    // Remove the "filter-active" class from all filter items
+    const filterItems = document.querySelectorAll(".products-flters li");
+    filterItems.forEach((item) => {
+      item.classList.remove("filter-active");
+    });
+
+    // Add the "filter-active" class to the corresponding filter item in your UI
+    const activeFilterItem = document.querySelector(
+      `[data-filter=".filter-${filterParam}"]`
+    );
+    if (activeFilterItem) {
+      activeFilterItem.classList.add("filter-active");
+    }
+
+    // Hide products that don't match the selected filter
+    const products = document.querySelectorAll(".products-item");
+    products.forEach((product) => {
+      if (!product.classList.contains(`filter-${filterParam}`)) {
+        product.style.display = "none";
       }
-
-      // Check if the "filter" query parameter is present in the URL
-      const filterParam = getQueryParam('filter');
-
-      // Check if a filter value is provided and apply it to your products
-      if (filterParam) {
-          // Remove the "filter-active" class from all filter items
-          const filterItems = document.querySelectorAll('.products-flters li');
-          filterItems.forEach(item => {
-              item.classList.remove('filter-active');
-          });
-
-          // Add the "filter-active" class to the corresponding filter item in your UI
-          const activeFilterItem = document.querySelector(`[data-filter=".filter-${filterParam}"]`);
-          if (activeFilterItem) {
-              activeFilterItem.classList.add('filter-active');
-          }
-
-          // Hide products that don't match the selected filter
-          const products = document.querySelectorAll('.products-item');
-          products.forEach(product => {
-              if (!product.classList.contains(`filter-${filterParam}`)) {
-                  product.style.display = 'none';
-              }
-          });
-      }
+    });
+  }
 
   /**
    * Porfolio isotope and filter
@@ -354,72 +356,65 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-    /**
+  /**
    * Products isotope and filter
    */
-    let productsnIsotope = document.querySelector(".products-isotope");
+  let productsnIsotope = document.querySelector(".products-isotope");
 
-    if (productsnIsotope) {
-      let productsFilter = productsnIsotope.getAttribute(
-        "data-products-filter"
-      )
-        ? productsnIsotope.getAttribute("data-products-filter")
-        : "*";
-      let productsLayout = productsnIsotope.getAttribute(
-        "data-products-layout"
-      )
-        ? productsnIsotope.getAttribute("data-products-layout")
-        : "masonry";
-      let productsSort = productsnIsotope.getAttribute("data-products-sort")
-        ? productsnIsotope.getAttribute("data-products-sort")
-        : "original-order";
-  
-      window.addEventListener("load", () => {
-        let productsIsotope = new Isotope(
-          document.querySelector(".products-container"),
-          {
-            itemSelector: ".products-item",
-            layoutMode: productsLayout,
-            filter: productsFilter,
-            sortBy: productsSort,
-          }
+  if (productsnIsotope) {
+    let productsFilter = productsnIsotope.getAttribute("data-products-filter")
+      ? productsnIsotope.getAttribute("data-products-filter")
+      : "*";
+    let productsLayout = productsnIsotope.getAttribute("data-products-layout")
+      ? productsnIsotope.getAttribute("data-products-layout")
+      : "masonry";
+    let productsSort = productsnIsotope.getAttribute("data-products-sort")
+      ? productsnIsotope.getAttribute("data-products-sort")
+      : "original-order";
+
+    window.addEventListener("load", () => {
+      let productsIsotope = new Isotope(
+        document.querySelector(".products-container"),
+        {
+          itemSelector: ".products-item",
+          layoutMode: productsLayout,
+          filter: productsFilter,
+          sortBy: productsSort,
+        }
+      );
+
+      let menuFilters = document.querySelectorAll(
+        ".products-isotope .products-flters li"
+      );
+      menuFilters.forEach(function (el) {
+        el.addEventListener(
+          "click",
+          function () {
+            document
+              .querySelector(
+                ".products-isotope .products-flters .filter-active"
+              )
+              .classList.remove("filter-active");
+            this.classList.add("filter-active");
+            productsIsotope.arrange({
+              filter: this.getAttribute("data-filter"),
+            });
+            if (typeof aos_init === "function") {
+              aos_init();
+            }
+          },
+          false
         );
-  
-        let menuFilters = document.querySelectorAll(
-          ".products-isotope .products-flters li"
-        );
-        menuFilters.forEach(function (el) {
-          el.addEventListener(
-            "click",
-            function () {
-              document
-                .querySelector(
-                  ".products-isotope .products-flters .filter-active"
-                )
-                .classList.remove("filter-active");
-              this.classList.add("filter-active");
-              productsIsotope.arrange({
-                filter: this.getAttribute("data-filter"),
-              });
-              if (typeof aos_init === "function") {
-                aos_init();
-              }
-            },
-            false
-          );
-        });
       });
-    }
+    });
+  }
 
-
-
-    // Function to get the value of a query parameter from the URL
+  // Function to get the value of a query parameter from the URL
   function getQueryParam(param) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     return urlParams.get(param);
   }
-
 
   /**
    * Animation on scroll function and init
@@ -456,22 +451,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
- // Get the "Product" list item and its dropdown menu
- const productDropdown = document.getElementById("product-dropdown");
- const productDropdownMenu = productDropdown.querySelector("ul");
+// Get the "Product" list item and its dropdown menu
+const productDropdown = document.getElementById("product-dropdown");
+const productDropdownMenu = productDropdown.querySelector("ul");
 
- // Add event listeners
- productDropdown.addEventListener("mouseenter", () => {
-   // Show the dropdown menu on mouse enter
-   productDropdownMenu.style.display = "block";
- });
+// Add event listeners
+productDropdown.addEventListener("mouseenter", () => {
+  // Show the dropdown menu on mouse enter
+  productDropdownMenu.style.display = "block";
+});
 
- productDropdown.addEventListener("mouseleave", () => {
-   // Hide the dropdown menu on mouse leave
-   productDropdownMenu.style.display = "none";
- });
+productDropdown.addEventListener("mouseleave", () => {
+  // Hide the dropdown menu on mouse leave
+  productDropdownMenu.style.display = "none";
+});
 
- // Add a click event listener to navigate to the product page for the main "Product" link
+// Add a click event listener to navigate to the product page for the main "Product" link
 const mainProductLink = productDropdown.querySelector("a");
 mainProductLink.addEventListener("click", (e) => {
   // Prevent the default link behavior for the main "Product" link
@@ -493,4 +488,3 @@ nestedLinks.forEach((link) => {
     window.location.href = link.getAttribute("href");
   });
 });
-

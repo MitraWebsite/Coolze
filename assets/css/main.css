@@ -1786,8 +1786,8 @@ section {
 /* For screens between 576px and 992px (tablets) */
 @media (min-width: 576px) and (max-width: 991.98px) {
   .products-container .products-item {
-    flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
-    max-width: calc(50% - 20px); /* Adjust the width as needed */
+    flex: 0 0 calc(48% - 20px); /* Adjust the width as needed */
+    max-width: calc(48% - 20px); /* Adjust the width as needed */
     display: flex;
     flex-direction: column;
     align-items: center;
