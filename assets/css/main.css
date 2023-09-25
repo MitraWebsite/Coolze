@@ -1364,8 +1364,12 @@ section {
 # Product Section
 --------------------------------------------------------------*/
 .product .product-item {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background: #ededed;
+  /* height: 8cm;
+  width: auto; */
 }
 
 .product .product-item .item-img {
@@ -1440,8 +1444,9 @@ section {
 }
 
 .product .product-item:hover .item-img {
-  opacity: 1;
+  opacity: 0.7;
 }
+
 
 /*--------------------------------------------------------------
 # Services Cards Section
