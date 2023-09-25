@@ -890,7 +890,6 @@ section {
   .service .service-item:nth-child(2) {
     flex-direction: column-reverse; /* Reorder columns for mobile */
   }
-
 }
 
 .service .service-item h3 {
@@ -946,9 +945,8 @@ section {
   }
 }
 
-
 .service .service-item .service-img-bg img {
-  position: absolute;
+  position: relative;
   inset: 0;
   display: block;
   width: 100%;
@@ -1124,7 +1122,7 @@ section {
   transition: 0.3s;
 }
 
-.clients .clients-slider.swiper-slide{
+.clients .clients-slider.swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1479,7 +1477,6 @@ section {
   margin: 0;
 }
 
-
 /*--------------------------------------------------------------
 # Documentation Section
 --------------------------------------------------------------*/
@@ -1563,7 +1560,6 @@ section {
     transform: scale(1.12);
   }
 }
-
 
 /*--------------------------------------------------------------
 # Testimonials Section
