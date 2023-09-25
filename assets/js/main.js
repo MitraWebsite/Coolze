@@ -265,6 +265,38 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", updateIconPosition);
   window.addEventListener("resize", updateIconPosition);
 
+        // Function to get the value of a query parameter from the URL
+        function getQueryParam(param) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(param);
+      }
+
+      // Check if the "filter" query parameter is present in the URL
+      const filterParam = getQueryParam('filter');
+
+      // Check if a filter value is provided and apply it to your products
+      if (filterParam) {
+          // Remove the "filter-active" class from all filter items
+          const filterItems = document.querySelectorAll('.products-flters li');
+          filterItems.forEach(item => {
+              item.classList.remove('filter-active');
+          });
+
+          // Add the "filter-active" class to the corresponding filter item in your UI
+          const activeFilterItem = document.querySelector(`[data-filter=".filter-${filterParam}"]`);
+          if (activeFilterItem) {
+              activeFilterItem.classList.add('filter-active');
+          }
+
+          // Hide products that don't match the selected filter
+          const products = document.querySelectorAll('.products-item');
+          products.forEach(product => {
+              if (!product.classList.contains(`filter-${filterParam}`)) {
+                  product.style.display = 'none';
+              }
+          });
+      }
+
   /**
    * Porfolio isotope and filter
    */
@@ -321,6 +353,73 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+    /**
+   * Products isotope and filter
+   */
+    let productsnIsotope = document.querySelector(".products-isotope");
+
+    if (productsnIsotope) {
+      let productsFilter = productsnIsotope.getAttribute(
+        "data-products-filter"
+      )
+        ? productsnIsotope.getAttribute("data-products-filter")
+        : "*";
+      let productsLayout = productsnIsotope.getAttribute(
+        "data-products-layout"
+      )
+        ? productsnIsotope.getAttribute("data-products-layout")
+        : "masonry";
+      let productsSort = productsnIsotope.getAttribute("data-products-sort")
+        ? productsnIsotope.getAttribute("data-products-sort")
+        : "original-order";
+  
+      window.addEventListener("load", () => {
+        let productsIsotope = new Isotope(
+          document.querySelector(".products-container"),
+          {
+            itemSelector: ".products-item",
+            layoutMode: productsLayout,
+            filter: productsFilter,
+            sortBy: productsSort,
+          }
+        );
+  
+        let menuFilters = document.querySelectorAll(
+          ".products-isotope .products-flters li"
+        );
+        menuFilters.forEach(function (el) {
+          el.addEventListener(
+            "click",
+            function () {
+              document
+                .querySelector(
+                  ".products-isotope .products-flters .filter-active"
+                )
+                .classList.remove("filter-active");
+              this.classList.add("filter-active");
+              productsIsotope.arrange({
+                filter: this.getAttribute("data-filter"),
+              });
+              if (typeof aos_init === "function") {
+                aos_init();
+              }
+            },
+            false
+          );
+        });
+      });
+    }
+
+
+
+    // Function to get the value of a query parameter from the URL
+  function getQueryParam(param) {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    return urlParams.get(param);
+  }
+
 
   /**
    * Animation on scroll function and init
