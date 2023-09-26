@@ -537,16 +537,16 @@ mainProductLink.addEventListener("click", (e) => {
 });
 
 // Update the links for nested dropdown items (VRF, Gree, Daikin)
-const nestedLinks = productDropdownMenu.querySelectorAll("a");
+// const nestedLinks = productDropdownMenu.querySelectorAll("a");
 
-nestedLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    // Prevent the default link behavior
-    e.preventDefault();
+// nestedLinks.forEach((link) => {
+//   link.addEventListener("click", (e) => {
+//     // Prevent the default link behavior
+//     e.preventDefault();
 
-    // Redirect to the linked page
-    window.location.href = link.getAttribute("href");
-  });
-});
+//     // Redirect to the linked page
+//     window.location.href = link.getAttribute("href");
+//   });
+// });
 
 
