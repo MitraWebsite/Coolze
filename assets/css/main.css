@@ -601,7 +601,8 @@ section {
   background-size: cover;
   position: relative;
   /* padding: 120px 0; */
-  padding: 400px 0;
+  /* padding: 400px 0; */
+  padding: 500px 0;
   z-index: 3;
 }
 
