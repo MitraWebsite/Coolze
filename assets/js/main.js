@@ -358,7 +358,54 @@ filterItems.forEach(item => {
       
 // End Products Filter ============================================
 
- 
+// Commercial Filter Function ==============================================
+
+function filterCommercial(filterParam) {
+  const filterItems = document.querySelectorAll('.commercial-filters li');
+  filterItems.forEach(item => {
+    item.classList.remove('filter-active');
+    if (item.getAttribute('data-filter') === filterParam) {
+      item.classList.add('filter-active');
+    }
+  });
+
+  const commercialItems = document.querySelectorAll('.commercial-item');
+  commercialItems.forEach(item => {
+    item.style.display = 'none';
+  });
+
+  if (filterParam === '*') {
+    commercialItems.forEach(item => {
+      item.style.display = 'block';
+    });
+  } else {
+    const filteredItems = document.querySelectorAll(`.commercial-item${filterParam}`);
+    filteredItems.forEach(item => {
+      item.style.display = 'block';
+    });
+  }
+}
+
+// Check if the "commercial-filter" query parameter is present in the URL
+const commercialFilterParam = getQueryParam('commercial-filter');
+
+// Check if a filter value is provided and apply it to your commercial items
+if (commercialFilterParam) {
+  filterCommercial(commercialFilterParam);
+}
+
+// Event listener for filter clicks in the Commercial section
+const filterCommercialItems = document.querySelectorAll('.commercial-filters li');
+filterCommercialItems.forEach(item => {
+  item.addEventListener('click', function () {
+    const filterValue = this.getAttribute('data-filter');
+    filterCommercial(filterValue);
+  });
+});
+
+// End Commercial Filter Function ============================================
+
+
   /**
    * Porfolio isotope and filter
    */
