@@ -358,7 +358,69 @@ filterItems.forEach(item => {
       
 // End Products Filter ============================================
 
- 
+// Commercial Filter Function ==============================================
+
+// Function to filter commercial items based on the query parameter
+function filterCommercial(filterParam) {
+  const filterItems = document.querySelectorAll('.commercial-filters li');
+  filterItems.forEach(item => {
+    item.classList.remove('filter-active');
+    if (item.getAttribute('data-filter') === `.filter-${filterParam}`) {
+      item.classList.add('filter-active');
+    }
+  });
+
+  const commercialItems = document.querySelectorAll('.commercial-item');
+  commercialItems.forEach(item => {
+    item.style.display = 'none';
+  });
+
+  if (filterParam === '*') {
+    commercialItems.forEach(item => {
+      item.style.display = 'block';
+    });
+  } else {
+    const filteredItems = document.querySelectorAll(`.commercial-item.filter-${filterParam}`);
+    filteredItems.forEach(item => {
+      item.style.display = 'block';
+    });
+  }
+}
+
+// Function to get the value of a query parameter from the URL
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+// Check if the "commercial-filter" query parameter is present in the URL
+const commercialFilterParam = getQueryParam('commercial-filter');
+
+// Check if a filter value is provided and apply it to your commercial items
+if (commercialFilterParam) {
+  filterCommercial(commercialFilterParam);
+}
+
+// Event listener for filter clicks in the Commercial section
+const filterCommercialItems = document.querySelectorAll('.commercial-filters li');
+filterCommercialItems.forEach(item => {
+  item.addEventListener('click', function () {
+    const filterValue = this.getAttribute('data-filter').replace('.filter-', '');
+    filterCommercial(filterValue);
+
+    // Update the URL with the filter parameter
+    const url = new URL(window.location.href);
+    url.searchParams.set('commercial-filter', filterValue);
+    window.history.replaceState({}, '', url);
+  });
+});
+
+// Function to filter commercial items based on the query parameter
+
+
+// End Commercial Filter Function ============================================
+
+
   /**
    * Porfolio isotope and filter
    */
