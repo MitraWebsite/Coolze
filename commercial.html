@@ -16,7 +16,7 @@
 
     <meta
       property="og:title"
-      content="Project - Coolze Servis AC terbaik di Indonesia"
+      content="Products - Coolze Servis AC terbaik di Indonesia"
     />
 
     <meta property="og:url" content="https://coolzeac.com/project" />
@@ -64,17 +64,9 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-
-    <!-- =======================================================
-  * Template Name: Nova
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
   </head>
 
-  <body class="page-portfolio">
+  <body class="page-products">
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
@@ -95,32 +87,38 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li id= "product-dropdown" class="dropdown">
-              <a href="product.html"
+            <li id="product-dropdown" class="dropdown">
+              <a href="product.html" class="active"
                 ><span>Product</span>
                 <i class="bi bi-chevron-down dropdown-indicator"></i
               ></a>
               <ul>
                 <li class="dropdown">
                   <a href="index.html"
-                    ><span>VRF</span>
+                    ><span>Commercial AC</span>
                     <i class="bi bi-chevron-down dropdown-indicator"></i
                   ></a>
                   <ul>
                     <li>
-                      <a href="index.html">Gree</a>
+                      <a href="commercial.html?filter=cassette">Cassette</a>
                     </li>
                     <li>
-                      <a href="project.html">Daikin</a>
+                      <a href="commercial.html">VRV</a>
+                    </li>
+                    <li>
+                      <a href="commercial.html">VRF</a>
+                    </li>
+                    <li>
+                      <a href="commercial.html">GMV</a>
                     </li>
                   </ul>
                 </li>
-                <li><a href="index.html">Split Wall</a></li>
-                <li><a href="index.html">Standing Floor</a></li>
-                <li><a href="index.html">Multi S</a></li>
+                <li><a href="products.html?filter=split-wall">Split Wall</a></li>
+                <li><a href="products.html?filter=standing-floor">Standing Floor</a></li>
+                <li><a href="products.html?filter=multi-s">Multi S</a></li>
               </ul>
             </li>
-            <li><a href="project.html" class="active">Project</a></li>
+            <li><a href="project.html">Project</a></li>
             <!-- <li><a href="team.html">Team</a></li> -->
             <li><a href="blog.html">Article</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -140,20 +138,20 @@
         <div
           class="container position-relative d-flex flex-column align-items-center"
         >
-          <h2>Project</h2>
+          <h2>Products</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Project</li>
+            <li>Products</li>
           </ol>
         </div>
       </div>
       <!-- End Breadcrumbs -->
 
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio sections-bg">
+      <!-- ======= Products Section ======= -->
+      <section id="products" class="products sections-bg">
         <div class="container" data-aos="fade-up">
           <div class="section-header">
-            <h2>Project</h2>
+            <h2>Products</h2>
             <p>
               Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum
               nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti
@@ -161,329 +159,273 @@
           </div>
 
           <div
-            class="portfolio-isotope"
-            data-portfolio-filter="*"
-            data-portfolio-layout="masonry"
-            data-portfolio-sort="original-order"
+            class="products-isotope"
+            data-products-filter="*"
+            data-products-layout="masonry"
+            data-products-sort="original-order"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <div>
-              <ul class="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-residential">Residential</li>
-                <li data-filter=".filter-commercial">Commercial</li>
-                <li data-filter=".filter-industrial">Industrial</li>
+              <ul class="products-flters">
+                <!-- <li data-filter="*" class="filter-active">All</li> -->
+                <li data-filter=".filter-split-wall">Split Wall</li>
+                <li data-filter=".filter-multi-s">Multi S</li>
+                <li data-filter=".filter-standing-floor">Standing Floor</li>
               </ul>
-              <!-- End Portfolio Filters -->
+              <!-- End Products Filters -->
             </div>
 
-            <div class="row gy-4 portfolio-container">
+            <div class="row gy-4 products-container">
               <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-commercial"
+                class="col-lg-4 col-md-12 col-6 products-item filter-split-wall"
               >
-                <div class="portfolio-wrap">
+                <div class="products-wrap">
                   <a
                     href="assets/img/portfolio/app-1.jpg"
-                    data-gallery="portfolio-gallery-app"
+                    data-gallery="products-gallery-app"
                     class="glightbox"
                     ><img
                       src="assets/img/portfolio/app-1.jpg"
                       class="img-fluid"
                       alt=""
                   /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >App 1</a
-                      >
-                    </h4>
+                  <div class="products-info">
+                    <h4>Split Wall 1</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur</p>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Products Item -->
 
-              <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-residential"
-              >
-                <div class="portfolio-wrap">
-                  <a
-                    href="assets/img/portfolio/product-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/product-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Product 1</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-industrial"
-              >
-                <div class="portfolio-wrap">
-                  <a
-                    href="assets/img/portfolio/branding-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/branding-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Branding 1</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-industrial"
-              >
-                <div class="portfolio-wrap">
-                  <a
-                    href="assets/img/portfolio/books-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/books-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Books 1</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-commercial"
-              >
-                <div class="portfolio-wrap">
+              <div class="col-lg-4 col-md-6 col-6 products-item filter-multi-s">
+                <div class="products-wrap">
                   <a
                     href="assets/img/portfolio/app-2.jpg"
-                    data-gallery="portfolio-gallery-app"
+                    data-gallery="products-gallery-app"
                     class="glightbox"
                     ><img
                       src="assets/img/portfolio/app-2.jpg"
                       class="img-fluid"
                       alt=""
                   /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >App 2</a
-                      >
-                    </h4>
+                  <div class="products-info">
+                    <h4>Multi S 1</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur</p>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Products Item -->
 
               <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-residential"
+                class="col-lg-4 col-md-6 col-6 products-item filter-standing-floor"
               >
-                <div class="portfolio-wrap">
-                  <a
-                    href="assets/img/portfolio/product-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/product-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Product 2</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-industrial"
-              >
-                <div class="portfolio-wrap">
-                  <a
-                    href="assets/img/portfolio/branding-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/branding-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Branding 2</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-commercial"
-              >
-                <div class="portfolio-wrap">
-                  <a
-                    href="assets/img/portfolio/books-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/books-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Books 2</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-commercial"
-              >
-                <div class="portfolio-wrap">
+                <div class="products-wrap">
                   <a
                     href="assets/img/portfolio/app-3.jpg"
-                    data-gallery="portfolio-gallery-app"
+                    data-gallery="products-gallery-app"
                     class="glightbox"
                     ><img
                       src="assets/img/portfolio/app-3.jpg"
                       class="img-fluid"
                       alt=""
                   /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >App 3</a
-                      >
-                    </h4>
+                  <div class="products-info">
+                    <h4>Standing Floor 1</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur</p>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Products Item -->
 
               <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-residential"
+                class="col-lg-4 col-md-6 col-6 products-item filter-split-wall"
               >
-                <div class="portfolio-wrap">
+                <div class="products-wrap">
                   <a
-                    href="assets/img/portfolio/product-3.jpg"
-                    data-gallery="portfolio-gallery-app"
+                    href="assets/img/portfolio/app-1.jpg"
+                    data-gallery="products-gallery-app"
                     class="glightbox"
                     ><img
-                      src="assets/img/portfolio/product-3.jpg"
+                      src="assets/img/portfolio/app-1.jpg"
                       class="img-fluid"
                       alt=""
                   /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Product 3</a
-                      >
-                    </h4>
+                  <div class="products-info">
+                    <h4>Split Wall 1</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur</p>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Products Item -->
 
-              <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-industrial"
-              >
-                <div class="portfolio-wrap">
+              <div class="col-lg-4 col-md-6 col-6 products-item filter-multi-s">
+                <div class="products-wrap">
                   <a
-                    href="assets/img/portfolio/branding-3.jpg"
-                    data-gallery="portfolio-gallery-app"
+                    href="assets/img/portfolio/app-2.jpg"
+                    data-gallery="products-gallery-app"
                     class="glightbox"
                     ><img
-                      src="assets/img/portfolio/branding-3.jpg"
+                      src="assets/img/portfolio/app-2.jpg"
                       class="img-fluid"
                       alt=""
                   /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Branding 3</a
-                      >
-                    </h4>
+                  <div class="products-info">
+                    <h4>Multi S 1</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur</p>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Products Item -->
 
               <div
-                class="col-lg-4 col-md-6 col-6 portfolio-item filter-residential"
+                class="col-lg-4 col-md-6 col-6 products-item filter-standing-floor"
               >
-                <div class="portfolio-wrap">
+                <div class="products-wrap">
                   <a
-                    href="assets/img/portfolio/books-3.jpg"
-                    data-gallery="portfolio-gallery-app"
+                    href="assets/img/portfolio/app-3.jpg"
+                    data-gallery="products-gallery-app"
                     class="glightbox"
                     ><img
-                      src="assets/img/portfolio/books-3.jpg"
+                      src="assets/img/portfolio/app-3.jpg"
                       class="img-fluid"
                       alt=""
                   /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Books 3</a
-                      >
-                    </h4>
+                  <div class="products-info">
+                    <h4>Standing Floor 1</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur</p>
                   </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
+              <!-- End Products Item -->
+
+              <div
+                class="col-lg-4 col-md-6 col-6 products-item filter-split-wall"
+              >
+                <div class="products-wrap">
+                  <a
+                    href="assets/img/portfolio/app-1.jpg"
+                    data-gallery="products-gallery-app"
+                    class="glightbox"
+                    ><img
+                      src="assets/img/portfolio/app-1.jpg"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <div class="products-info">
+                    <h4>Split Wall 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Products Item -->
+
+              <div class="col-lg-4 col-md-6 col-6 products-item filter-multi-s">
+                <div class="products-wrap">
+                  <a
+                    href="assets/img/portfolio/app-2.jpg"
+                    data-gallery="products-gallery-app"
+                    class="glightbox"
+                    ><img
+                      src="assets/img/portfolio/app-2.jpg"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <div class="products-info">
+                    <h4>Multi S 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Products Item -->
+
+              <div
+                class="col-lg-4 col-md-6 col-6 products-item filter-standing-floor"
+              >
+                <div class="products-wrap">
+                  <a
+                    href="assets/img/portfolio/app-3.jpg"
+                    data-gallery="products-gallery-app"
+                    class="glightbox"
+                    ><img
+                      src="assets/img/portfolio/app-3.jpg"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <div class="products-info">
+                    <h4>Standing Floor 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Products Item -->
+
+              <div
+                class="col-lg-4 col-md-6 col-6 products-item filter-split-wall"
+              >
+                <div class="products-wrap">
+                  <a
+                    href="assets/img/portfolio/app-1.jpg"
+                    data-gallery="products-gallery-app"
+                    class="glightbox"
+                    ><img
+                      src="assets/img/portfolio/app-1.jpg"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <div class="products-info">
+                    <h4>Split Wall 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Products Item -->
+
+              <div class="col-lg-4 col-md-6 col-6 products-item filter-multi-s">
+                <div class="products-wrap">
+                  <a
+                    href="assets/img/portfolio/app-2.jpg"
+                    data-gallery="products-gallery-app"
+                    class="glightbox"
+                    ><img
+                      src="assets/img/portfolio/app-2.jpg"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <div class="products-info">
+                    <h4>Multi S 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Products Item -->
+
+              <div
+                class="col-lg-4 col-md-6 col-6 products-item filter-standing-floor"
+              >
+                <div class="products-wrap">
+                  <a
+                    href="assets/img/portfolio/app-3.jpg"
+                    data-gallery="products-gallery-app"
+                    class="glightbox"
+                    ><img
+                      src="assets/img/portfolio/app-3.jpg"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <div class="products-info">
+                    <h4>Standing Floor 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Products Item -->
             </div>
-            <!-- End Portfolio Container -->
+            <!-- End Products Container -->
           </div>
         </div>
       </section>
-      <!-- End Portfolio Section -->
+      <!-- End Products Section -->
 
       <!-- Client -->
       <!-- ======= Clients Section ======= -->

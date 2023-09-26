@@ -600,7 +600,7 @@ section {
   background: url("../img/HVAC/vrv-ac-outside.jpg") top center;
   background-size: cover;
   position: relative;
-  padding: 120px 0;
+  padding: 500px 0;
   z-index: 3;
 }
 
@@ -737,6 +737,7 @@ section {
 # Why Choose Us Section
 --------------------------------------------------------------*/
 .why-us {
+  padding-top: 100px;/* Try Just Added */
   padding-bottom: 0;
 }
 

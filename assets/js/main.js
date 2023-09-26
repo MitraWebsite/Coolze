@@ -265,40 +265,100 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", updateIconPosition);
   window.addEventListener("resize", updateIconPosition);
 
+  // Products Filter URL ======================================
+
   // Function to get the value of a query parameter from the URL
-  function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-  }
+  // function getQueryParam(param) {
+  //   const urlParams = new URLSearchParams(window.location.search);
+  //   return urlParams.get(param);
+  // }
 
   // Check if the "filter" query parameter is present in the URL
-  const filterParam = getQueryParam("filter");
+  // const filterParam = getQueryParam("filter");
 
   // Check if a filter value is provided and apply it to your products
-  if (filterParam) {
+  // if (filterParam) {
     // Remove the "filter-active" class from all filter items
-    const filterItems = document.querySelectorAll(".products-flters li");
-    filterItems.forEach((item) => {
-      item.classList.remove("filter-active");
-    });
+    // const filterItems = document.querySelectorAll(".products-flters li");
+    // filterItems.forEach((item) => {
+    //   item.classList.remove("filter-active");
+    // });
 
     // Add the "filter-active" class to the corresponding filter item in your UI
-    const activeFilterItem = document.querySelector(
-      `[data-filter=".filter-${filterParam}"]`
-    );
-    if (activeFilterItem) {
-      activeFilterItem.classList.add("filter-active");
-    }
+    // const activeFilterItem = document.querySelector(
+    //   `[data-filter=".filter-${filterParam}"]`
+    // );
+    // if (activeFilterItem) {
+    //   activeFilterItem.classList.add("filter-active");
+    // }
 
     // Hide products that don't match the selected filter
-    const products = document.querySelectorAll(".products-item");
-    products.forEach((product) => {
-      if (!product.classList.contains(`filter-${filterParam}`)) {
-        product.style.display = "none";
-      }
-    });
-  }
+  //   const products = document.querySelectorAll(".products-item");
+  //   products.forEach((product) => {
+  //     if (!product.classList.contains(`filter-${filterParam}`)) {
+  //       product.style.display = "none";
+  //     }
+  //   });
+  // }
 
+// End Products Filter URL ======================================
+
+
+//Products Filter ============================================
+
+// Function to get the value of a query parameter from the URL
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+// Function to filter products based on the query parameter
+function filterProducts(filterParam) {
+  const filterItems = document.querySelectorAll('.products-flters li');
+  filterItems.forEach(item => {
+      item.classList.remove('filter-active');
+      if (item.getAttribute('data-filter') === `.filter-${filterParam}`) {
+          item.classList.add('filter-active');
+      }
+  });
+
+  const products = document.querySelectorAll('.products-item');
+  products.forEach(product => {
+      product.style.display = 'none';
+  });
+
+  if (filterParam === '*') {
+      products.forEach(product => {
+          product.style.display = 'block';
+      });
+  } else {
+      const filteredProducts = document.querySelectorAll(`.products-item.filter-${filterParam}`);
+      filteredProducts.forEach(product => {
+          product.style.display = 'block';
+      });
+  }
+}
+
+// Check if the "filter" query parameter is present in the URL
+const filterParam = getQueryParam('filter');
+
+// Check if a filter value is provided and apply it to your products
+if (filterParam) {
+  filterProducts(filterParam);
+}
+
+// Event listener for filter clicks
+const filterItems = document.querySelectorAll('.products-flters li');
+filterItems.forEach(item => {
+  item.addEventListener('click', function () {
+      const filterValue = this.getAttribute('data-filter').replace('.filter-', '');
+      filterProducts(filterValue);
+  });
+});
+      
+// End Products Filter ============================================
+
+ 
   /**
    * Porfolio isotope and filter
    */
@@ -488,3 +548,5 @@ nestedLinks.forEach((link) => {
     window.location.href = link.getAttribute("href");
   });
 });
+
+
