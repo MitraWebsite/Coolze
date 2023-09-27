@@ -582,13 +582,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
 const productDropdown = document.getElementById("product-dropdown");
 const productDropdownMenu = productDropdown.querySelector("ul");
 const productDropdownLink = productDropdown.querySelector("a");
 
 // Get the "Commercial AC" sub-dropdown and its menu
-const commercialACDropdown = productDropdown.querySelector(".dropdown");
+const commercialACDropdown = productDropdown.getElementById("commercial-drop");
 const commercialACDropdownMenu = commercialACDropdown.querySelector("ul");
 
 // Get sub-dropdown items
