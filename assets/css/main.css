@@ -1822,16 +1822,16 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Commercial Section - Cassete, VRV, VRF, GMV
+# cassette Section - Cassete, VRV, VRF, GMV
 --------------------------------------------------------------*/
-.commercial .commercial-filters {
+.cassette .cassette-filters {
   padding: 0 0 20px 0;
   margin: 0 auto;
   list-style: none;
   text-align: center;
 }
 
-.commercial .commercial-filters li {
+.cassette .cassette-filters li {
   cursor: pointer;
   display: inline-block;
   padding: 0;
@@ -1842,34 +1842,34 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.commercial .commercial-filters li:hover,
-.commercial .commercial-filters li.filter-active {
+.cassette .cassette-filters li:hover,
+.cassette .cassette-filters li.filter-active {
   color: var(--color-primary);
 }
 
-.commercial .commercial-filters li:first-child {
+.cassette .cassette-filters li:first-child {
   margin-left: 0;
 }
 
-.commercial .commercial-filters li:last-child {
+.cassette .cassette-filters li:last-child {
   margin-right: 0;
 }
 
 @media (max-width: 575px) {
-  .commercial .commercial-filters li {
+  .cassette .cassette-filters li {
     font-size: 14px;
     margin: 0 5px;
   }
 }
 
-.commercial .commercial-wrap {
+.cassette .cassette-wrap {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   height: 100%;
   overflow: hidden;
 }
 
-.commercial .commercial-wrap img {
+.cassette .cassette-wrap img {
   transition: 0.3s;
   position: relative;
   z-index: 1;
@@ -1878,7 +1878,7 @@ section {
   object-fit: cover;
 }
 
-.commercial .commercial-wrap .commercial-info {
+.cassette .cassette-wrap .cassette-info {
   padding: 25px 20px;
   background-color: #fff;
   position: relative;
@@ -1886,35 +1886,35 @@ section {
   z-index: 2;
 }
 
-.commercial .commercial-wrap .commercial-info h4 {
+.cassette .cassette-wrap .cassette-info h4 {
   font-size: 18px;
   font-weight: 600;
   padding-right: 50px;
 }
 
-.commercial .commercial-wrap .commercial-info h4 a {
+.cassette .cassette-wrap .cassette-info h4 a {
   color: var(--color-default);
   transition: 0.3s;
 }
 
-.commercial .commercial-wrap .commercial-info h4 a:hover {
+.cassette .cassette-wrap .cassette-info h4 a:hover {
   color: var(--color-primary);
 }
 
-.commercial .commercial-wrap .commercial-info p {
+.cassette .cassette-wrap .cassette-info p {
   color: #6c757d;
   font-size: 14px;
   margin-bottom: 0;
   padding-right: 50px;
 }
 
-.commercial .commercial-wrap:hover img {
+.cassette .cassette-wrap:hover img {
   transform: scale(1.1);
 }
 
 /* For screens smaller than 576px (mobile) */
 @media (max-width: 575.98px) {
-  .commercial-container .commercial-item {
+  .cassette-container .cassette-item {
     flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
     max-width: calc(50% - 20px); /* Adjust the width as needed */
     display: flex;
@@ -1929,7 +1929,7 @@ section {
 
 /* For screens between 576px and 992px (tablets) */
 @media (min-width: 576px) and (max-width: 991.98px) {
-  .commercial-container .commercial-item {
+  .cassette-container .cassette-item {
     flex: 0 0 calc(48% - 20px); /* Adjust the width as needed */
     max-width: calc(48% - 20px); /* Adjust the width as needed */
     display: flex;
@@ -1944,7 +1944,7 @@ section {
 
 /* For screens larger than 992px (desktop) */
 @media (min-width: 992px) {
-  .commercial-container .commercial-item {
+  .cassette-container .cassette-item {
     flex: 0 0 calc(33.333% - 20px); /* Adjust the width as needed */
     max-width: calc(33.333% - 20px); /* Adjust the width as needed */
     margin-top: 30px;
@@ -1954,11 +1954,11 @@ section {
   }
 }
 
-.commercial-wrap {
+.cassette-wrap {
   height: 100%;
 }
 
-.commercial-info {
+.cassette-info {
   border-top: none;
   height: 6cm;
 }
