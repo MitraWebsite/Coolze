@@ -603,7 +603,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //   // Prevent the default link behavior for the main "Product" link
 //   e.preventDefault();
 
-//   // Redirect to the product page
+//   Redirect to the product page
 //   window.location.href = "product.html";
 // });
 const productDropdown = document.getElementById("product-dropdown");
