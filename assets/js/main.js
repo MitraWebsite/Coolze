@@ -576,26 +576,68 @@ filterCommercialItems.forEach(item => {
 // Get the "Product" list item and its dropdown menu
 const productDropdown = document.getElementById("product-dropdown");
 const productDropdownMenu = productDropdown.querySelector("ul");
+const productDropdownLink = productDropdown.querySelector("a");
 
-// Add event listeners
+// Get the "Commercial AC" sub-dropdown and its menu
+const commercialACDropdown = productDropdown.querySelector(".dropdown");
+const commercialACDropdownMenu = commercialACDropdown.querySelector("ul");
+
+// Get sub-dropdown items
+const subDropdownItems = commercialACDropdownMenu.querySelectorAll("li");
+
+// Function to show or hide a dropdown menu for mobile devices
+function toggleMobileDropdown(dropdown, menu) {
+  if (window.innerWidth <= 768) { // Adjust the breakpoint as needed
+    menu.style.display =
+      menu.style.display === "block" ? "none" : "block";
+  }
+}
+
+// Add event listeners for mobile behavior
+productDropdownLink.addEventListener("click", (e) => {
+  // Prevent the default link behavior for the main "Product" link on mobile
+  if (window.innerWidth <= 768) { // Adjust the breakpoint as needed
+    e.preventDefault();
+    
+    // Toggle the visibility of the "Product" dropdown menu on mobile
+    toggleMobileDropdown(productDropdown, productDropdownMenu);
+  }
+});
+
+commercialACDropdown.addEventListener("click", (e) => {
+  // Prevent the default link behavior
+  e.preventDefault();
+
+  // Toggle the visibility of the "Commercial AC" dropdown menu on mobile
+  toggleMobileDropdown(commercialACDropdown, commercialACDropdownMenu);
+});
+
+// Add event listeners for desktop hover behavior
 productDropdown.addEventListener("mouseenter", () => {
-  // Show the dropdown menu on mouse enter
+  // Show the "Product" dropdown menu on desktop
   productDropdownMenu.style.display = "block";
 });
 
 productDropdown.addEventListener("mouseleave", () => {
-  // Hide the dropdown menu on mouse leave
+  // Hide the "Product" dropdown menu on desktop
   productDropdownMenu.style.display = "none";
 });
 
-// Add a click event listener to navigate to the product page for the main "Product" link
-const mainProductLink = productDropdown.querySelector("a");
-mainProductLink.addEventListener("click", (e) => {
-  // Prevent the default link behavior for the main "Product" link
-  e.preventDefault();
+commercialACDropdown.addEventListener("mouseenter", () => {
+  // Show the "Commercial AC" dropdown menu on desktop
+  commercialACDropdownMenu.style.display = "block";
+});
 
-  // Redirect to the product page
-  window.location.href = "product.html";
+commercialACDropdown.addEventListener("mouseleave", () => {
+  // Hide the "Commercial AC" dropdown menu on desktop
+  commercialACDropdownMenu.style.display = "none";
+});
+
+// Prevent sub-dropdown from closing when clicking on sub-dropdown items
+subDropdownItems.forEach((subDropdownItem) => {
+  subDropdownItem.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent the click event from propagating to the parent dropdown
+  });
 });
 
 // Update the links for nested dropdown items (VRF, Gree, Daikin)
