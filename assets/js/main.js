@@ -582,30 +582,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Get the "Product" list item and its dropdown menu
-// const productDropdown = document.getElementById("product-dropdown");
-// const productDropdownMenu = productDropdown.querySelector("ul");
 
-// // Add event listeners
-// productDropdown.addEventListener("mouseenter", () => {
-//   // Show the dropdown menu on mouse enter
-//   productDropdownMenu.style.display = "block";
-// });
-
-// productDropdown.addEventListener("mouseleave", () => {
-//   // Hide the dropdown menu on mouse leave
-//   productDropdownMenu.style.display = "none";
-// });
-
-// // Add a click event listener to navigate to the product page for the main "Product" link
-// const mainProductLink = productDropdown.querySelector("a");
-// mainProductLink.addEventListener("click", (e) => {
-//   // Prevent the default link behavior for the main "Product" link
-//   e.preventDefault();
-
-//   // Redirect to the product page
-//   window.location.href = "product.html";
-// });
 const productDropdown = document.getElementById("product-dropdown");
 const productDropdownMenu = productDropdown.querySelector("ul");
 const productDropdownLink = productDropdown.querySelector("a");
@@ -673,15 +650,19 @@ subDropdownItems.forEach((subDropdownItem) => {
   });
 });
 
-// Update the links for nested dropdown items (VRF, Gree, Daikin)
-// const nestedLinks = productDropdownMenu.querySelectorAll("a");
+// Add event listeners
+productDropdown.addEventListener("mouseenter", () => {
+  // Show the dropdown menu on mouse enter
+  productDropdownMenu.style.display = "block";
+});
 
-// nestedLinks.forEach((link) => {
-//   link.addEventListener("click", (e) => {
-//     // Prevent the default link behavior
-//     e.preventDefault();
+productDropdown.addEventListener("mouseleave", () => {
+  // Hide the dropdown menu on mouse leave
+  productDropdownMenu.style.display = "none";
+});
 
-//     // Redirect to the linked page
-//     window.location.href = link.getAttribute("href");
-//   });
-// });
+// // Add a click event listener to navigate to the product page for the main "Product" link
+// const mainProductLink = productDropdown.querySelector("a");
+// mainProductLink.addEventListener("click", (e) => {
+//   // Prevent the default link behavior for the main "Product" link
+//   e.preventDefault();
