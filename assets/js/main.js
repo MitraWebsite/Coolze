@@ -307,7 +307,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // }
 
   // End Products Filter URL ======================================
-
   /**
    * Project isotope and filter
    */
@@ -364,6 +363,64 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+   /**
+   * Cassette isotope and filter
+   */
+   let cassettenIsotope = document.querySelector(".cassette-isotope");
+
+   if (cassettenIsotope) {
+     let cassetteFilter = cassettenIsotope.getAttribute(
+       "data-cassette-filter"
+     )
+       ? cassettenIsotope.getAttribute("data-cassette-filter")
+       : "*";
+     let cassetteLayout = cassettenIsotope.getAttribute(
+       "data-cassette-layout"
+     )
+       ? cassettenIsotope.getAttribute("data-cassette-layout")
+       : "masonry";
+     let cassetteSort = cassettenIsotope.getAttribute("data-cassette-sort")
+       ? cassettenIsotope.getAttribute("data-cassette-sort")
+       : "original-order";
+ 
+     window.addEventListener("load", () => {
+       let cassetteIsotope = new Isotope(
+         document.querySelector(".cassette-container"),
+         {
+           itemSelector: ".cassette-item",
+           layoutMode: cassetteLayout,
+           filter: cassetteFilter,
+           sortBy: cassetteSort,
+         }
+       );
+ 
+       let menuFilters = document.querySelectorAll(
+         ".cassette-isotope .cassette-filters li"
+       );
+       menuFilters.forEach(function (el) {
+         el.addEventListener(
+           "click",
+           function () {
+             document
+               .querySelector(
+                 ".cassette-isotope .cassette-filters .filter-active"
+               )
+               .classList.remove("filter-active");
+             this.classList.add("filter-active");
+             cassetteIsotope.arrange({
+               filter: this.getAttribute("data-filter"),
+             });
+             if (typeof aos_init === "function") {
+               aos_init();
+             }
+           },
+           false
+         );
+       });
+     });
+   }
+
 
   /**
    * Products isotope and filter

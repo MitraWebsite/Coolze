@@ -1952,8 +1952,9 @@ section {
 }
 
 /*--------------------------------------------------------------
-# cassette Section - Cassete
+# Cassette Section 
 --------------------------------------------------------------*/
+/* Cassette Filters */
 .cassette .cassette-filters {
   padding: 0 0 20px 0;
   margin: 0 auto;
@@ -1992,6 +1993,7 @@ section {
   }
 }
 
+/* cassette Wrap */
 .cassette .cassette-wrap {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -2004,8 +2006,8 @@ section {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto; /* Adjusted height to maintain aspect ratio */
+  object-fit: cover; /* Ensures entire image is visible */
 }
 
 .cassette .cassette-wrap .cassette-info {
@@ -2014,12 +2016,15 @@ section {
   position: relative;
   border-top: 1px solid #f3f3f3;
   z-index: 2;
+  max-height: 200px; /* Set a maximum height */
+  overflow-y: auto; /* Allow vertical scrolling if needed */
 }
 
 .cassette .cassette-wrap .cassette-info h4 {
   font-size: 18px;
   font-weight: 600;
   padding-right: 50px;
+  margin-bottom: 10px; /* Added margin to separate heading and description */
 }
 
 .cassette .cassette-wrap .cassette-info h4 a {
@@ -2034,209 +2039,51 @@ section {
 .cassette .cassette-wrap .cassette-info p {
   color: #6c757d;
   font-size: 14px;
-  margin-bottom: 0;
   padding-right: 50px;
+  margin-bottom: 0;
 }
 
 .cassette .cassette-wrap:hover img {
   transform: scale(1.1);
 }
 
-/* For screens smaller than 576px (mobile) */
+/* Responsive Styles */
 @media (max-width: 575.98px) {
   .cassette-container .cassette-item {
-    flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
-    max-width: calc(50% - 20px); /* Adjust the width as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
+    flex: 0 0 100%; /* Full width on mobile */
+    max-width: 100%; /* Full width on mobile */
+    margin: 15px 0;
   }
 }
 
-/* For screens between 576px and 992px (tablets) */
 @media (min-width: 576px) and (max-width: 991.98px) {
   .cassette-container .cassette-item {
-    flex: 0 0 calc(48% - 20px); /* Adjust the width as needed */
-    max-width: calc(48% - 20px); /* Adjust the width as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 20px;
+    flex: 0 0 48%; /* Adjusted width for tablets */
+    max-width: 48%; /* Adjusted width for tablets */
+    margin: 20px 1%; /* Adjusted margin for tablets */
   }
 }
 
-/* For screens larger than 992px (desktop) */
 @media (min-width: 992px) {
   .cassette-container .cassette-item {
-    flex: 0 0 calc(33.333% - 20px); /* Adjust the width as needed */
-    max-width: calc(33.333% - 20px); /* Adjust the width as needed */
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
+    flex: 0 0 31%; /* Adjusted width for desktop */
+    max-width: 31%; /* Adjusted width for desktop */
+    margin: 20px 1%; /* Adjusted margin for desktop */
   }
 }
 
-.cassette-wrap {
-  height: 100%;
-}
-
-.cassette-info {
-  border-top: none;
-  height: 6cm;
-}
-
-/*--------------------------------------------------------------
-# Portfolio Section
---------------------------------------------------------------*/
-.portfolio .portfolio-flters {
-  padding: 0 0 20px 0;
-  margin: 0 auto;
-  list-style: none;
-  text-align: center;
-}
-
-.portfolio .portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 10px;
-  line-height: 1;
-  transition: all 0.3s ease-in-out;
-}
-
-.portfolio .portfolio-flters li:hover,
-.portfolio .portfolio-flters li.filter-active {
-  color: var(--color-primary);
-}
-
-.portfolio .portfolio-flters li:first-child {
-  margin-left: 0;
-}
-
-.portfolio .portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
-@media (max-width: 575px) {
-  .portfolio .portfolio-flters li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-}
-
-.portfolio .portfolio-wrap {
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+/* Additional Styles */
+.cassette .cassette-wrap {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  height: 100%;
-  overflow: hidden;
 }
 
-.portfolio .portfolio-wrap img {
-  transition: 0.3s;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.portfolio .portfolio-wrap .portfolio-info {
-  padding: 25px 20px;
-  background-color: #fff;
-  position: relative;
-  border-top: 1px solid #f3f3f3;
-  z-index: 2;
-}
-
-.portfolio .portfolio-wrap .portfolio-info h4 {
-  font-size: 18px;
-  font-weight: 600;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-wrap .portfolio-info h4 a {
-  color: var(--color-default);
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-wrap .portfolio-info h4 a:hover {
-  color: var(--color-primary);
-}
-
-.portfolio .portfolio-wrap .portfolio-info p {
-  color: #6c757d;
-  font-size: 14px;
-  margin-bottom: 0;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-wrap:hover img {
-  transform: scale(1.1);
-}
-
-/* For screens smaller than 576px (mobile) */
-@media (max-width: 575.98px) {
-  .portfolio-container .portfolio-item {
-    flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
-    max-width: calc(50% - 20px); /* Adjust the width as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
-
-/* For screens between 576px and 992px (tablets) */
-@media (min-width: 576px) and (max-width: 991.98px) {
-  .portfolio-container .portfolio-item {
-    flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
-    max-width: calc(50% - 20px); /* Adjust the width as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 20px;
-  }
-}
-
-/* For screens larger than 992px (desktop) */
-@media (min-width: 992px) {
-  .portfolio-container .portfolio-item {
-    flex: 0 0 calc(33.333% - 20px); /* Adjust the width as needed */
-    max-width: calc(33.333% - 20px); /* Adjust the width as needed */
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
-
-.portfolio-wrap {
-  height: 100%;
-}
-
-.portfolio-info {
+.cassette .cassette-info {
   border-top: none;
-  height: 6cm;
 }
 
 /*--------------------------------------------------------------
-# Project Section - AC Combo, Split Wall, Standing Floor
+# Project Section 
 --------------------------------------------------------------*/
 /* Project Filters */
 .project .project-flters {
