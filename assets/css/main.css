@@ -2236,6 +2236,138 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Project Section - AC Combo, Split Wall, Standing Floor
+--------------------------------------------------------------*/
+/* Project Filters */
+.project .project-flters {
+  padding: 0 0 20px 0;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.project .project-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 10px;
+  line-height: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.project .project-flters li:hover,
+.project .project-flters li.filter-active {
+  color: var(--color-primary);
+}
+
+.project .project-flters li:first-child {
+  margin-left: 0;
+}
+
+.project .project-flters li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .project .project-flters li {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+}
+
+/* project Wrap */
+.project .project-wrap {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project .project-wrap img {
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto; /* Adjusted height to maintain aspect ratio */
+  object-fit: cover; /* Ensures entire image is visible */
+}
+
+.project .project-wrap .project-info {
+  padding: 25px 20px;
+  background-color: #fff;
+  position: relative;
+  border-top: 1px solid #f3f3f3;
+  z-index: 2;
+  max-height: 200px; /* Set a maximum height */
+  overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+.project .project-wrap .project-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 50px;
+  margin-bottom: 10px; /* Added margin to separate heading and description */
+}
+
+.project .project-wrap .project-info h4 a {
+  color: var(--color-default);
+  transition: 0.3s;
+}
+
+.project .project-wrap .project-info h4 a:hover {
+  color: var(--color-primary);
+}
+
+.project .project-wrap .project-info p {
+  color: #6c757d;
+  font-size: 14px;
+  padding-right: 50px;
+  margin-bottom: 0;
+}
+
+.project .project-wrap:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 575.98px) {
+  .project-container .project-item {
+    flex: 0 0 100%; /* Full width on mobile */
+    max-width: 100%; /* Full width on mobile */
+    margin: 15px 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .project-container .project-item {
+    flex: 0 0 48%; /* Adjusted width for tablets */
+    max-width: 48%; /* Adjusted width for tablets */
+    margin: 20px 1%; /* Adjusted margin for tablets */
+  }
+}
+
+@media (min-width: 992px) {
+  .project-container .project-item {
+    flex: 0 0 31%; /* Adjusted width for desktop */
+    max-width: 31%; /* Adjusted width for desktop */
+    margin: 20px 1%; /* Adjusted margin for desktop */
+  }
+}
+
+/* Additional Styles */
+.project .project-wrap {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.project .project-info {
+  border-top: none;
+}
+
+
+/*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
