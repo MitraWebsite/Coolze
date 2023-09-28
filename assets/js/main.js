@@ -6,7 +6,7 @@
  * License: https://bootstrapmade.com/license/
  */
 document.addEventListener("DOMContentLoaded", () => {
-  "use strict";
+  ("use strict");
 
   /**
    * Preloader
@@ -164,20 +164,25 @@ document.addEventListener("DOMContentLoaded", () => {
   /**
    * Scroll top and WhatsApp buttons
    */
+
+  function toggleButtons(scrollTop, whatsappButton) {
+    window.scrollY > 100
+      ? scrollTop.classList.add("active")
+      : scrollTop.classList.remove("active");
+    whatsappButton.classList.add("active"); // Always make the WhatsApp button active
+  }
+
   const whatsappButton = document.querySelector(".whatsapp-button");
 
   if (scrollTop && whatsappButton) {
-    const toggleButtons = function () {
-      window.scrollY > 100
-        ? scrollTop.classList.add("active")
-        : scrollTop.classList.remove("active");
-      whatsappButton.classList.add("active"); // Always make the WhatsApp button active
-    };
+    window.addEventListener("load", () =>
+      toggleButtons(scrollTop, whatsappButton)
+    );
+    document.addEventListener("scroll", () =>
+      toggleButtons(scrollTop, whatsappButton)
+    );
 
-    window.addEventListener("load", toggleButtons);
-    document.addEventListener("scroll", toggleButtons);
-
-    scrollTop.addEventListener("click", function () {
+    scrollTop.addEventListener("click", () => {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -303,6 +308,116 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // End Products Filter URL ======================================
 
+  /**
+   * Porfolio isotope and filter
+   */
+  let portfolionIsotope = document.querySelector(".portfolio-isotope");
+
+  if (portfolionIsotope) {
+    let portfolioFilter = portfolionIsotope.getAttribute(
+      "data-portfolio-filter"
+    )
+      ? portfolionIsotope.getAttribute("data-portfolio-filter")
+      : "*";
+    let portfolioLayout = portfolionIsotope.getAttribute(
+      "data-portfolio-layout"
+    )
+      ? portfolionIsotope.getAttribute("data-portfolio-layout")
+      : "masonry";
+    let portfolioSort = portfolionIsotope.getAttribute("data-portfolio-sort")
+      ? portfolionIsotope.getAttribute("data-portfolio-sort")
+      : "original-order";
+
+    window.addEventListener("load", () => {
+      let portfolioIsotope = new Isotope(
+        document.querySelector(".portfolio-container"),
+        {
+          itemSelector: ".portfolio-item",
+          layoutMode: portfolioLayout,
+          filter: portfolioFilter,
+          sortBy: portfolioSort,
+        }
+      );
+
+      let menuFilters = document.querySelectorAll(
+        ".portfolio-isotope .portfolio-flters li"
+      );
+      menuFilters.forEach(function (el) {
+        el.addEventListener(
+          "click",
+          function () {
+            document
+              .querySelector(
+                ".portfolio-isotope .portfolio-flters .filter-active"
+              )
+              .classList.remove("filter-active");
+            this.classList.add("filter-active");
+            portfolioIsotope.arrange({
+              filter: this.getAttribute("data-filter"),
+            });
+            if (typeof aos_init === "function") {
+              aos_init();
+            }
+          },
+          false
+        );
+      });
+    });
+  }
+
+  /**
+   * Products isotope and filter
+   */
+  // let productsnIsotope = document.querySelector(".products-isotope");
+
+  // if (productsnIsotope) {
+  //   let productsFilter = productsnIsotope.getAttribute("data-products-filter")
+  //     ? productsnIsotope.getAttribute("data-products-filter")
+  //     : "*";
+  //   let productsLayout = productsnIsotope.getAttribute("data-products-layout")
+  //     ? productsnIsotope.getAttribute("data-products-layout")
+  //     : "masonry";
+  //   let productsSort = productsnIsotope.getAttribute("data-products-sort")
+  //     ? productsnIsotope.getAttribute("data-products-sort")
+  //     : "original-order";
+
+  //   window.addEventListener("load", () => {
+  //     let productsIsotope = new Isotope(
+  //       document.querySelector(".products-container"),
+  //       {
+  //         itemSelector: ".products-item",
+  //         layoutMode: productsLayout,
+  //         filter: productsFilter,
+  //         sortBy: productsSort,
+  //       }
+  //     );
+
+  //     let menuFilters = document.querySelectorAll(
+  //       ".products-isotope .products-flters li"
+  //     );
+  //     menuFilters.forEach(function (el) {
+  //       el.addEventListener(
+  //         "click",
+  //         function () {
+  //           document
+  //             .querySelector(
+  //               ".products-isotope .products-flters .filter-active"
+  //             )
+  //             .classList.remove("filter-active");
+  //           this.classList.add("filter-active");
+  //           productsIsotope.arrange({
+  //             filter: this.getAttribute("data-filter"),
+  //           });
+  //           if (typeof aos_init === "function") {
+  //             aos_init();
+  //           }
+  //         },
+  //         false
+  //       );
+  //     });
+  //   });
+  // }
+
   //Products Filter ============================================
 
   // Function to get the value of a query parameter from the URL
@@ -393,12 +508,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Function to get the value of a query parameter from the URL
-  function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-  }
-
   // Check if the "commercial-filter" query parameter is present in the URL
   const commercialFilterParam = getQueryParam("commercial-filter");
 
@@ -429,123 +538,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to filter commercial items based on the query parameter
 
   // End Commercial Filter Function ============================================
-
-  /**
-   * Porfolio isotope and filter
-   */
-  let portfolionIsotope = document.querySelector(".portfolio-isotope");
-
-  if (portfolionIsotope) {
-    let portfolioFilter = portfolionIsotope.getAttribute(
-      "data-portfolio-filter"
-    )
-      ? portfolionIsotope.getAttribute("data-portfolio-filter")
-      : "*";
-    let portfolioLayout = portfolionIsotope.getAttribute(
-      "data-portfolio-layout"
-    )
-      ? portfolionIsotope.getAttribute("data-portfolio-layout")
-      : "masonry";
-    let portfolioSort = portfolionIsotope.getAttribute("data-portfolio-sort")
-      ? portfolionIsotope.getAttribute("data-portfolio-sort")
-      : "original-order";
-
-    window.addEventListener("load", () => {
-      let portfolioIsotope = new Isotope(
-        document.querySelector(".portfolio-container"),
-        {
-          itemSelector: ".portfolio-item",
-          layoutMode: portfolioLayout,
-          filter: portfolioFilter,
-          sortBy: portfolioSort,
-        }
-      );
-
-      let menuFilters = document.querySelectorAll(
-        ".portfolio-isotope .portfolio-flters li"
-      );
-      menuFilters.forEach(function (el) {
-        el.addEventListener(
-          "click",
-          function () {
-            document
-              .querySelector(
-                ".portfolio-isotope .portfolio-flters .filter-active"
-              )
-              .classList.remove("filter-active");
-            this.classList.add("filter-active");
-            portfolioIsotope.arrange({
-              filter: this.getAttribute("data-filter"),
-            });
-            if (typeof aos_init === "function") {
-              aos_init();
-            }
-          },
-          false
-        );
-      });
-    });
-  }
-
-  /**
-   * Products isotope and filter
-   */
-  let productsnIsotope = document.querySelector(".products-isotope");
-
-  if (productsnIsotope) {
-    let productsFilter = productsnIsotope.getAttribute("data-products-filter")
-      ? productsnIsotope.getAttribute("data-products-filter")
-      : "*";
-    let productsLayout = productsnIsotope.getAttribute("data-products-layout")
-      ? productsnIsotope.getAttribute("data-products-layout")
-      : "masonry";
-    let productsSort = productsnIsotope.getAttribute("data-products-sort")
-      ? productsnIsotope.getAttribute("data-products-sort")
-      : "original-order";
-
-    window.addEventListener("load", () => {
-      let productsIsotope = new Isotope(
-        document.querySelector(".products-container"),
-        {
-          itemSelector: ".products-item",
-          layoutMode: productsLayout,
-          filter: productsFilter,
-          sortBy: productsSort,
-        }
-      );
-
-      let menuFilters = document.querySelectorAll(
-        ".products-isotope .products-flters li"
-      );
-      menuFilters.forEach(function (el) {
-        el.addEventListener(
-          "click",
-          function () {
-            document
-              .querySelector(
-                ".products-isotope .products-flters .filter-active"
-              )
-              .classList.remove("filter-active");
-            this.classList.add("filter-active");
-            productsIsotope.arrange({
-              filter: this.getAttribute("data-filter"),
-            });
-            if (typeof aos_init === "function") {
-              aos_init();
-            }
-          },
-          false
-        );
-      });
-    });
-  }
-
-  // Function to get the value of a query parameter from the URL
-  function getQueryParam(param) {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    return urlParams.get(param);
-  }
 
   /**
    * Animation on scroll function and init
