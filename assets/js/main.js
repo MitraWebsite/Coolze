@@ -317,14 +317,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let projectnIsotope = document.querySelector(".project-isotope");
 
   if (projectnIsotope) {
-    let projectFilter = projectnIsotope.getAttribute(
-      "data-project-filter"
-    )
+    let projectFilter = projectnIsotope.getAttribute("data-project-filter")
       ? projectnIsotope.getAttribute("data-project-filter")
       : "*";
-    let projectLayout = projectnIsotope.getAttribute(
-      "data-project-layout"
-    )
+    let projectLayout = projectnIsotope.getAttribute("data-project-layout")
       ? projectnIsotope.getAttribute("data-project-layout")
       : "masonry";
     let projectSort = projectnIsotope.getAttribute("data-project-sort")
@@ -350,9 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "click",
           function () {
             document
-              .querySelector(
-                ".project-isotope .project-flters .filter-active"
-              )
+              .querySelector(".project-isotope .project-flters .filter-active")
               .classList.remove("filter-active");
             this.classList.add("filter-active");
             projectIsotope.arrange({
@@ -368,63 +362,101 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-   /**
+  /**
    * Cassette isotope and filter
    */
-   let cassettenIsotope = document.querySelector(".cassette-isotope");
+  //  let cassettenIsotope = document.querySelector(".cassette-isotope");
 
-   if (cassettenIsotope) {
-     let cassetteFilter = cassettenIsotope.getAttribute(
-       "data-cassette-filter"
-     )
-       ? cassettenIsotope.getAttribute("data-cassette-filter")
-       : "*";
-     let cassetteLayout = cassettenIsotope.getAttribute(
-       "data-cassette-layout"
-     )
-       ? cassettenIsotope.getAttribute("data-cassette-layout")
-       : "masonry";
-     let cassetteSort = cassettenIsotope.getAttribute("data-cassette-sort")
-       ? cassettenIsotope.getAttribute("data-cassette-sort")
-       : "original-order";
- 
-     window.addEventListener("load", () => {
-       let cassetteIsotope = new Isotope(
-         document.querySelector(".cassette-container"),
-         {
-           itemSelector: ".cassette-item",
-           layoutMode: cassetteLayout,
-           filter: cassetteFilter,
-           sortBy: cassetteSort,
-         }
-       );
- 
-       let menuFilters = document.querySelectorAll(
-         ".cassette-isotope .cassette-filters li"
-       );
-       menuFilters.forEach(function (el) {
-         el.addEventListener(
-           "click",
-           function () {
-             document
-               .querySelector(
-                 ".cassette-isotope .cassette-filters .filter-active"
-               )
-               .classList.remove("filter-active");
-             this.classList.add("filter-active");
-             cassetteIsotope.arrange({
-               filter: this.getAttribute("data-filter"),
-             });
-             if (typeof aos_init === "function") {
-               aos_init();
-             }
-           },
-           false
-         );
-       });
-     });
-   }
+  //  if (cassettenIsotope) {
+  //    let cassetteFilter = cassettenIsotope.getAttribute(
+  //      "data-cassette-filter"
+  //    )
+  //      ? cassettenIsotope.getAttribute("data-cassette-filter")
+  //      : "*";
+  //    let cassetteLayout = cassettenIsotope.getAttribute(
+  //      "data-cassette-layout"
+  //    )
+  //      ? cassettenIsotope.getAttribute("data-cassette-layout")
+  //      : "masonry";
+  //    let cassetteSort = cassettenIsotope.getAttribute("data-cassette-sort")
+  //      ? cassettenIsotope.getAttribute("data-cassette-sort")
+  //      : "original-order";
 
+  //    window.addEventListener("load", () => {
+  //      let cassetteIsotope = new Isotope(
+  //        document.querySelector(".cassette-container"),
+  //        {
+  //          itemSelector: ".cassette-item",
+  //          layoutMode: cassetteLayout,
+  //          filter: cassetteFilter,
+  //          sortBy: cassetteSort,
+  //        }
+  //      );
+
+  //      let menuFilters = document.querySelectorAll(
+  //        ".cassette-isotope .cassette-filters li"
+  //      );
+  //      menuFilters.forEach(function (el) {
+  //        el.addEventListener(
+  //          "click",
+  //          function () {
+  //            document
+  //              .querySelector(
+  //                ".cassette-isotope .cassette-filters .filter-active"
+  //              )
+  //              .classList.remove("filter-active");
+  //            this.classList.add("filter-active");
+  //            cassetteIsotope.arrange({
+  //              filter: this.getAttribute("data-filter"),
+  //            });
+  //            if (typeof aos_init === "function") {
+  //              aos_init();
+  //            }
+  //          },
+  //          false
+  //        );
+  //      });
+  //    });
+  //  }
+
+  function filterCassette(filterParam) {
+    const filterItems = document.querySelectorAll(".cassette-filters li");
+    filterItems.forEach((item) => {
+      item.classList.remove("filter-active");
+      if (item.getAttribute("data-filter") === `.filter-${filterParam}`) {
+        item.classList.add("filter-active");
+      }
+    });
+
+    const Cassette = document.querySelectorAll(".cassette-item");
+    Cassette.forEach((product) => {
+      product.style.display = "none";
+    });
+
+    if (filterParam === "*") {
+      Cassette.forEach((product) => {
+        product.style.display = "block";
+      });
+    } else {
+      const filteredCassette = document.querySelectorAll(
+        `.cassette-item.filter-${filterParam}`
+      );
+      filteredCassette.forEach((product) => {
+        product.style.display = "block";
+      });
+    }
+  }
+
+  const cassetteItems = document.querySelectorAll(".cassette-filters li");
+  cassetteItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      const filterValue = this.getAttribute("data-filter").replace(
+        ".filter-",
+        ""
+      );
+      filterCassette(filterValue);
+    });
+  });
 
   /**
    * Products isotope and filter
