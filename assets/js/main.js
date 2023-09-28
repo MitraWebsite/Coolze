@@ -254,15 +254,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to update the position of the icon section
   function updateIconPosition() {
     const iconList = document.getElementById("iconSocialList");
-    const windowHeight = window.innerHeight;
-    const iconHeight = iconList.clientHeight;
 
-    if (windowHeight > iconHeight) {
-      // Icons fit within the window, position at the bottom
-      iconList.style.bottom = "0";
-    } else {
-      // Icons exceed window height, position accordingly
-      iconList.style.bottom = `${windowHeight - iconHeight}px`;
+    // Check if the element with ID "iconSocialList" exists
+    if (iconList) {
+      const windowHeight = window.innerHeight;
+      const iconHeight = iconList.clientHeight;
+
+      if (windowHeight > iconHeight) {
+        // Icons fit within the window, position at the bottom
+        iconList.style.bottom = "0";
+      } else {
+        // Icons exceed window height, position accordingly
+        iconList.style.bottom = `${windowHeight - iconHeight}px`;
+      }
     }
   }
 
