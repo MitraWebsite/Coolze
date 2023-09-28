@@ -311,40 +311,39 @@ document.addEventListener("DOMContentLoaded", () => {
   // }
 
   // End Products Filter URL ======================================
-
   /**
-   * Porfolio isotope and filter
+   * Project isotope and filter
    */
-  let portfolionIsotope = document.querySelector(".portfolio-isotope");
+  let projectnIsotope = document.querySelector(".project-isotope");
 
-  if (portfolionIsotope) {
-    let portfolioFilter = portfolionIsotope.getAttribute(
-      "data-portfolio-filter"
+  if (projectnIsotope) {
+    let projectFilter = projectnIsotope.getAttribute(
+      "data-project-filter"
     )
-      ? portfolionIsotope.getAttribute("data-portfolio-filter")
+      ? projectnIsotope.getAttribute("data-project-filter")
       : "*";
-    let portfolioLayout = portfolionIsotope.getAttribute(
-      "data-portfolio-layout"
+    let projectLayout = projectnIsotope.getAttribute(
+      "data-project-layout"
     )
-      ? portfolionIsotope.getAttribute("data-portfolio-layout")
+      ? projectnIsotope.getAttribute("data-project-layout")
       : "masonry";
-    let portfolioSort = portfolionIsotope.getAttribute("data-portfolio-sort")
-      ? portfolionIsotope.getAttribute("data-portfolio-sort")
+    let projectSort = projectnIsotope.getAttribute("data-project-sort")
+      ? projectnIsotope.getAttribute("data-project-sort")
       : "original-order";
 
     window.addEventListener("load", () => {
-      let portfolioIsotope = new Isotope(
-        document.querySelector(".portfolio-container"),
+      let projectIsotope = new Isotope(
+        document.querySelector(".project-container"),
         {
-          itemSelector: ".portfolio-item",
-          layoutMode: portfolioLayout,
-          filter: portfolioFilter,
-          sortBy: portfolioSort,
+          itemSelector: ".project-item",
+          layoutMode: projectLayout,
+          filter: projectFilter,
+          sortBy: projectSort,
         }
       );
 
       let menuFilters = document.querySelectorAll(
-        ".portfolio-isotope .portfolio-flters li"
+        ".project-isotope .project-flters li"
       );
       menuFilters.forEach(function (el) {
         el.addEventListener(
@@ -352,11 +351,11 @@ document.addEventListener("DOMContentLoaded", () => {
           function () {
             document
               .querySelector(
-                ".portfolio-isotope .portfolio-flters .filter-active"
+                ".project-isotope .project-flters .filter-active"
               )
               .classList.remove("filter-active");
             this.classList.add("filter-active");
-            portfolioIsotope.arrange({
+            projectIsotope.arrange({
               filter: this.getAttribute("data-filter"),
             });
             if (typeof aos_init === "function") {
@@ -368,6 +367,64 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+   /**
+   * Cassette isotope and filter
+   */
+   let cassettenIsotope = document.querySelector(".cassette-isotope");
+
+   if (cassettenIsotope) {
+     let cassetteFilter = cassettenIsotope.getAttribute(
+       "data-cassette-filter"
+     )
+       ? cassettenIsotope.getAttribute("data-cassette-filter")
+       : "*";
+     let cassetteLayout = cassettenIsotope.getAttribute(
+       "data-cassette-layout"
+     )
+       ? cassettenIsotope.getAttribute("data-cassette-layout")
+       : "masonry";
+     let cassetteSort = cassettenIsotope.getAttribute("data-cassette-sort")
+       ? cassettenIsotope.getAttribute("data-cassette-sort")
+       : "original-order";
+ 
+     window.addEventListener("load", () => {
+       let cassetteIsotope = new Isotope(
+         document.querySelector(".cassette-container"),
+         {
+           itemSelector: ".cassette-item",
+           layoutMode: cassetteLayout,
+           filter: cassetteFilter,
+           sortBy: cassetteSort,
+         }
+       );
+ 
+       let menuFilters = document.querySelectorAll(
+         ".cassette-isotope .cassette-filters li"
+       );
+       menuFilters.forEach(function (el) {
+         el.addEventListener(
+           "click",
+           function () {
+             document
+               .querySelector(
+                 ".cassette-isotope .cassette-filters .filter-active"
+               )
+               .classList.remove("filter-active");
+             this.classList.add("filter-active");
+             cassetteIsotope.arrange({
+               filter: this.getAttribute("data-filter"),
+             });
+             if (typeof aos_init === "function") {
+               aos_init();
+             }
+           },
+           false
+         );
+       });
+     });
+   }
+
 
   /**
    * Products isotope and filter
