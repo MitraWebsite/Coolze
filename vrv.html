@@ -10,16 +10,16 @@
       name="description"
     />
     <meta
-      content="Coolze Servis AC terbaik di Indonesia, Coolze, Tanggerang, Banten"
+      content="Coolze VRV AC Commercial - PT. Coolze Berkat Indonesia"
       name="keywords"
     />
 
     <meta
       property="og:title"
-      content="Ducting - Coolze Servis AC terbaik di Indonesia"
+      content="VRV - Coolze Servis AC terbaik di Indonesia"
     />
 
-    <meta property="og:url" content="https://coolzeac.com/ducting" />
+    <meta property="og:url" content="https://coolzeac.com/vrv" />
 
     <meta
       property="og:description"
@@ -34,7 +34,7 @@
     <meta property="og:type" content="website" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/favicon.ico" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
@@ -64,9 +64,17 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Coolze
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/Coolze-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
   </head>
 
-  <body class="page-products">
+  <body class="page-about">
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
@@ -74,7 +82,7 @@
       >
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="assets/img/Logo/coolze-stamp-7.png" alt="" />
+          <img src="assets/img/Logo/coolze-stamp-7.png" alt="Coolze Logo" />
           <!-- <h2 class="d-flex align-items-cente(2).pngr">Coolze</h2> -->
         </a>
 
@@ -85,16 +93,16 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html" class="active">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li class="dropdown">
-              <a href="product.html" class="active"
+            <li id="product-dropdown" class="dropdown">
+              <a href="product.html"
                 ><span>Product</span>
                 <i class="bi bi-chevron-down dropdown-indicator"></i
               ></a>
               <ul>
                 <li><a href="product.html">All Products</a></li>
-                <li class="dropdown">
+                <li id="commercial-drop" class="dropdown">
                   <a href=""
                     ><span>Commercial AC</span>
                     <i class="bi bi-chevron-down dropdown-indicator"></i
@@ -107,14 +115,10 @@
                       <a href="commercial.html">VRF</a>
                     </li>
                     <li>
-                      <a href="cassette.html"
-                        >Cassette</a
-                      >
+                      <a href="cassette.html">Cassette</a>
                     </li>
                     <li>
-                      <a href="ducting.html"
-                        >Ducting</a
-                      >
+                      <a href="ducting.html">Ducting</a>
                     </li>
                   </ul>
                 </li>
@@ -144,270 +148,186 @@
       <!-- ======= Breadcrumbs ======= -->
       <div
         class="breadcrumbs d-flex align-items-center"
-        style="background-image: url('assets/img/portfolio-header.jpg')"
+        style="background-image: url('assets/img/about-header.jpg')"
       >
         <div
           class="container position-relative d-flex flex-column align-items-center"
         >
-          <h2>Ducting</h2>
+          <h2>VRV</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Ducting</li>
+            <li><a href="product.html">Product</a></li>
+            <li>VRV</li>
           </ol>
         </div>
       </div>
       <!-- End Breadcrumbs -->
 
-      <!-- ======= Ducting Section ======= -->
-      <section id="ducting" class="ducting sections-bg">
+      <!-- ======= About Section Our Story ======= -->
+      <section id="about-story" class="about">
+        <div class="container section-title" data-aos="fade-up">
+          <header class="section-header">
+            <h2>DAIKIN AC VRV</h2>
+            <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+          </header>
+        </div>
+        <!-- End Section Title -->
+
         <div class="container" data-aos="fade-up">
-          <div class="section-header">
-            <h2>Ducting</h2>
-            <p>
-              Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum
-              nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti
-            </p>
-          </div>
-
-          <div
-            class="ducting-isotope"
-            data-ducting-filter="*"
-            data-ducting-layout="masonry"
-            data-ducting-sort="original-order"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div>
-              <ul class="ducting-filters">
-                <li data-filter=".filter-ducting">Gree</li>
-                <li data-filter=".filter-vrv">Daikin</li>
-              </ul>
-              <!-- End ducting Filters -->
+          <div class="row gy-4" data-aos="fade-up">
+            <div
+              class="col-lg-4 order-lg-1 order-2 d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="assets/img/DokumentasiService/ruko-coolze.JPG"
+                class="img-fluid"
+                alt="Coolze"
+              />
             </div>
-
-            <div class="row gy-4 ducting-container">
-<!-- ==================ducting=================== -->
-
-              <div
-                class="col-lg-4 col-md-6 col-6 ducting filter-gree"
-              >
-                <div class="ducting-wrap">
-                  <a
-                    href="assets/img/product/cassette/gree/cassette.jpg"
-                    data-gallery="cassette-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/product/cassette/gree/cassette.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="ducting-info">
-                    <h4>Duct Type</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
+            <div class="col-lg-8 order-lg-2 order-1">
+              <div class="content ps-lg-5 mb-4">
+                <!-- Your "Our Story" content goes here -->
+                <p>
+                  Teknologi terkini yang menggabungkan perangkat lunak dan
+                  perangkat keras canggih untuk efisiensi energi maksimal,
+                  memanfaatkan VRV, VRT, dan VAV, memunculkan penghematan energi
+                  dan kenyamanan AC yang optimal. Operasi uji yang lebih akurat
+                  dan sistem yang stabil tercapai melalui pengujian yang efisien
+                  dan fungsional, mempercepat instalasi dan memastikan kualitas
+                  pengaturan.
+                  <br />
+                  Papan kontrol utama yang canggih menggunakan teknologi SMT
+                  untuk meningkatkan kinerja anti-kekacauan dan melindungi dari
+                  kondisi lingkungan buruk. Kemampuan penyesuaian konsumsi daya
+                  hingga 11 tingkat dan rentang suhu operasi yang luas hingga
+                  49°C memastikan efisiensi dan kinerja optimal di berbagai
+                  kondisi. Operasi pengurutan otomatis dan fungsi operasi
+                  pencadangan ganda memberikan stabilitas dan ketangguhan sistem
+                  bahkan dalam situasi darurat. Dengan kemudahan perawatan yang
+                  disediakan, sistem VRV memungkinkan pemeliharaan tanpa
+                  mengganggu operasi unit dalam ruangan lainnya.
+                  <br />
+                </p>
+                <div class="brand-images">
+                  <div class="brand-logo">
+                    <img
+                      src="assets/img/brand/Daikin.png"
+                      class="img-fluid brand"
+                      alt="Daikin"
+                      style="
+                        max-width: 100px;
+                        height: auto;
+                        margin-bottom: 12px;
+                      "
+                    />
                   </div>
                 </div>
-              </div>
-              <!-- End Ducting Item -->
 
-              <div class="col-lg-4 col-md-6 col-6 ducting filter-gree">
-                <div class="ducting-wrap">
-                  <a
-                    href="assets/img/product/cassette/gree/1-way-cassette.jpg"
-                    data-gallery="ducting-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/product/cassette/gree/1-way-cassette.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="ducting-info">
-                    <h4>1 Way ducting</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
+                <ul>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Duis aute irure
+                    dolor in reprehenderit in voluptate velit.
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.
+                  </li>
+                </ul>
               </div>
-              <!-- End ducting Item -->
-
-              <div
-                class="col-lg-4 col-md-6 col-6 ducting filter-gree"
-              >
-                <div class="ducting-wrap">
-                  <a
-                    href="assets/img/product/cassette/gree/cassette.jpg"
-                    data-gallery="cassette-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/product/cassette/gree/cassette.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="ducting-info">
-                    <h4>Duct Type</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Ducting Item -->
-
-              <div class="col-lg-4 col-md-6 col-6 ducting filter-gree">
-                <div class="ducting-wrap">
-                  <a
-                    href="assets/img/product/cassette/gree/1-way-cassette.jpg"
-                    data-gallery="ducting-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/product/cassette/gree/1-way-cassette.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="ducting-info">
-                    <h4>1 Way ducting</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End ducting Item -->
-
-<!-- ===================End Cassette=============== -->
-
-<!-- ==================gmv=================== -->
-
-              <div
-              class="col-lg-4 col-md-6 col-6 commercial-item filter-gmv"
-              >
-              <div class="commercial-wrap">
-                <a
-                  href="assets/img/product/gmv/gmv-5.jpg"
-                  data-gallery="commercial-gallery-app"
-                  class="glightbox"
-                  ><img
-                    src="assets/img/product/gmv/gmv-5.jpg"
-                    class="img-fluid"
-                    alt=""
-                /></a>
-                <div class="commercial-info">
-                  <h4>GMV5</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-              </div>
-              <!-- End commercial Item -->
-
-              <div
-              class="col-lg-4 col-md-6 col-6 commercial-item filter-gmv"
-              >
-              <div class="commercial-wrap">
-                <a
-                  href="assets/img/product/gmv/gmv-5-heat-recovery.jpg"
-                  data-gallery="commercial-gallery-app"
-                  class="glightbox"
-                  ><img
-                    src="assets/img/product/gmv/gmv-5-heat-recovery.jpg"
-                    class="img-fluid"
-                    alt=""
-                /></a>
-                <div class="commercial-info">
-                  <h4>GMV5 Heat Recovery</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-              </div>
-              <!-- End commercial Item -->
-
-              <div
-              class="col-lg-4 col-md-6 col-6 commercial-item filter-gmv"
-              >
-              <div class="commercial-wrap">
-                <a
-                  href="assets/img/product/gmv/gmv-5-max.jpg"
-                  data-gallery="commercial-gallery-app"
-                  class="glightbox"
-                  ><img
-                    src="assets/img/product/gmv/gmv-5-max.jpg"
-                    class="img-fluid"
-                    alt=""
-                /></a>
-                <div class="commercial-info">
-                  <h4>GMV5 Max</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-              </div>
-              <!-- End commercial Item -->
-
-              <div
-              class="col-lg-4 col-md-6 col-6 commercial-item filter-gmv"
-              >
-              <div class="commercial-wrap">
-                <a
-                  href="assets/img/product/gmv/gmv-5-mini.jpg"
-                  data-gallery="commercial-gallery-app"
-                  class="glightbox"
-                  ><img
-                    src="assets/img/product/gmv/gmv-5-mini.jpg"
-                    class="img-fluid"
-                    alt=""
-                /></a>
-                <div class="commercial-info">
-                  <h4>GMV5 Mini</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-              </div>
-              <!-- End commercial Item -->
-
-              <div
-              class="col-lg-4 col-md-6 col-6 commercial-item filter-gmv"
-              >
-              <div class="commercial-wrap">
-                <a
-                  href="assets/img/product/gmv/gmv-5-slim.jpg"
-                  data-gallery="commercial-gallery-app"
-                  class="glightbox"
-                  ><img
-                    src="assets/img/product/gmv/gmv-5-slim.jpg"
-                    class="img-fluid"
-                    alt=""
-                /></a>
-                <div class="commercial-info">
-                  <h4>GMV5 Slim</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-              </div>
-              <!-- End commercial Item -->
-
-              <div
-              class="col-lg-4 col-md-6 col-6 commercial-item filter-gmv"
-              >
-              <div class="commercial-wrap">
-                <a
-                  href="assets/img/product/gmv/gmv-water.jpg"
-                  data-gallery="commercial-gallery-app"
-                  class="glightbox"
-                  ><img
-                    src="assets/img/product/gmv/gmv-water.jpg"
-                    class="img-fluid"
-                    alt=""
-                /></a>
-                <div class="commercial-info">
-                  <h4>GMV5 Water/h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-              </div>
-              <!-- End commercial Item -->
-
-<!-- ===================End gmv=============== -->
-
             </div>
-            <!-- End commercial Container -->
           </div>
         </div>
       </section>
-      <!-- End commercial Section -->
+      <!-- ======= End About Section Our Story ======= -->
 
-      <!-- Client -->
+      <!-- ======= About Section Company History ======= -->
+      <!-- <section id="company-history" class="about">
+        <div class="container section-title" data-aos="fade-up">
+          <header class="section-header">
+            <h2>Company History</h2>
+          </header>
+        </div>
+
+        <div class="container" data-aos="fade-up">
+          <div class="row gy-4" data-aos="fade-up">
+            <div class="col-lg-4 order-lg-2 order-2 d-flex align-items-center justify-content-center">
+                <img src="assets/img/about.jpg" class="img-fluid" alt="History" />
+            </div>
+            <div class="col-lg-8 order-lg-1 order-1">
+              <div class="content ps-lg-5 mb-4">
+                <p>Coolze lahir dari keluhan
+                  banyak orang yang sulit
+                  menemukan
+                  Solusi Masalah AC</p>
+                <h4>Company Roadmap</h4>
+                <ul>
+                  <p><strong><span class="year-highlight">2022: </span></strong> Coolze berawal dari menyediakan jasa Pemeliharaan AC Residential</p>
+                  <p><strong><span class="year-highlight">2023: </span></strong> Coolze di percaya pabrik-pabrik untuk pemeliharaan AC rutin dan menjadi Dealer Resmi AC Gree & Daikin
+                    </p>
+                  <p><strong><span class="year-highlight">2023: </span></strong> Coolze terus berkembang dalam penambahan Team Teknisi dan dapat melayani lebih banyak client </p>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- ======= End About Section Company History ======= -->
+
+      <!-- ======= About Section Our Values ======= -->
+      <section id="about-values" class="about">
+        <div class="container section-title" data-aos="fade-up">
+          <header class="section-header">
+            <h2>Our Values</h2>
+            <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+          </header>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up">
+          <div class="row gy-4" data-aos="fade-up">
+            <div
+              class="col-lg-4 order-lg-2 order-2 d-flex align-items-center justify-content-center"
+            >
+              <img src="assets/img/about.jpg" class="img-fluid" alt="Values" />
+            </div>
+            <div class="col-lg-8 order-lg-1 order-1">
+              <div class="content ps-lg-5 mb-4">
+                <!-- Your "Our Values" content goes here -->
+                <h3>Vision</h3>
+                <p>
+                  Coolze AC's vision is to become a leading provider of HVAC
+                  solutions, ensuring comfort and air quality for all customers.
+                </p>
+                <h3>Mission</h3>
+                <p>
+                  Our mission is to provide high-quality HVAC services, offering
+                  innovative solutions and exceptional customer service.
+                </p>
+                <ul>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Duis aute irure
+                    dolor in reprehenderit in voluptate velit.
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ======= End About Section Our Values ======= -->
+
       <!-- ======= Clients Section ======= -->
       <section id="clients" class="clients">
         <div class="container" data-aos="fade-up">
@@ -459,6 +379,24 @@
         </div>
       </section>
       <!-- End Clients Section -->
+
+      <!-- ======= Call To Action Section ======= -->
+      <section id="call-to-action" class="call-to-action">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h3>Coolze</h3>
+              <p>
+                Masuki kenyamanan yang sejuk bersama kami. Temukan kesegaran
+                yang Anda cari. Jangan biarkan panas mengganggu Anda; raih
+                kesegaran sekarang. Hubungi kami untuk kenyamanan yang sempurna.
+              </p>
+              <a class="cta-btn" href="#">Hubungi Kami</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Call To Action Section -->
     </main>
     <!-- End #main -->
 
@@ -589,11 +527,14 @@
     </footer>
     <!-- End Footer --><!-- End Footer -->
 
+    <!-- Scroll Up Button -->
     <a
       href="#"
       class="scroll-top d-flex align-items-center justify-content-center"
       ><i class="bi bi-arrow-up-short"></i
     ></a>
+
+    <!-- End Scroll Up Button -->
 
     <div id="preloader"></div>
 
