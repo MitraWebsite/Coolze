@@ -458,6 +458,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+ /**
+   * Ductingisotope and filter
+   */
+
+  function filterDucting(filterParam) {
+    const filterItems = document.querySelectorAll(".ducting-filters li");
+    filterItems.forEach((item) => {
+      item.classList.remove("filter-active");
+      if (item.getAttribute("data-filter") === `.filter-${filterParam}`) {
+        item.classList.add("filter-active");
+      }
+    });
+
+    const Ducting = document.querySelectorAll(".ducting-item");
+    Ducting.forEach((product) => {
+      product.style.display = "none";
+    });
+
+    if (filterParam === "*") {
+      Ducting.forEach((product) => {
+        product.style.display = "block";
+      });
+    } else {
+      const filteredDucting = document.querySelectorAll(
+        `.ducting-item.filter-${filterParam}`
+      );
+      filteredDucting.forEach((product) => {
+        product.style.display = "block";
+      });
+    }
+  }
+
+  const ductingItems = document.querySelectorAll(".ducting-filters li");
+  ductingItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      const filterValue = this.getAttribute("data-filter").replace(
+        ".filter-",
+        ""
+      );
+      filterDucting(filterValue);
+    });
+  });
+
+
   /**
    * Products isotope and filter
    */
