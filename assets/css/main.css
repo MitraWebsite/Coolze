@@ -2213,7 +2213,6 @@ section {
   border-top: none;
 }
 
-
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -3187,4 +3186,48 @@ section {
   text-align: center;
   font-size: 13px;
   color: var(--color-secondary);
+}
+
+/*--------------------------------------------------------------
+# VRV Section
+--------------------------------------------------------------*/
+.vrv .content h2 {
+  font-weight: 700;
+  font-size: 50px;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+}
+
+.vrv .content h3 {
+  font-weight: 700;
+  font-size: 36px;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+}
+
+.vrv .content p {
+  /* font-size: 20px; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 30px 0;
+  color: #365678;
+}
+
+.vrv .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vrv .content ul li {
+  padding: 0 0 15px 26px;
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.vrv .content ul i {
+  position: absolute;
+  font-size: 20px;
+  left: 0;
+  top: -3px;
+  color: var(--color-primary);
 }
