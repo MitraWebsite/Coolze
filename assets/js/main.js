@@ -763,9 +763,9 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrv-item">
-            <a href="${product.imageUrl}" data-gallery="products-gallery-app" class="glightbox">
+            <div>
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
-            </a>
+            </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
             </div>
@@ -788,9 +788,9 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrv-item">
-            <a href="${product.imageUrl}" data-gallery="products-gallery-app" class="glightbox">
+            <div>
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
-            </a>
+            </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
             </div>
@@ -836,9 +836,9 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrv-item">
-            <a href="${product.imageUrl}" data-gallery="products-gallery-app" class="glightbox">
+            <div>
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
-            </a>
+            </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
             </div>
@@ -861,9 +861,9 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrv-item">
-            <a href="${product.imageUrl}" data-gallery="products-gallery-app" class="glightbox">
+            <div>
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
-            </a>
+            </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
             </div>
@@ -906,9 +906,9 @@ function renderVrvSection(products, sectionId) {
       productHTML += `
         <div class="swiper-slide">
           <div class="vrv-item">
-            <a href="${product.imageUrl}" data-gallery="products-gallery-app" class="glightbox">
+            <div>
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
-            </a>
+            </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
             </div>
