@@ -3296,3 +3296,124 @@ section {
     width: calc(100% - 20px); /* Adjust width to fit 2 vrvs */
   }
 }
+
+/*--------------------------------------------------------------
+# VRF Section
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# VRF slider
+--------------------------------------------------------------*/
+.vrf .vrf-slider .swiper-slide img {
+  /* Update class names for the new "vrf" section */
+  opacity: 1;
+  transition: 0.3s;
+  width: auto; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Center align the brand images within the slide */
+.vrf-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vrf .vrf-slider .swiper-slide img:hover {
+  /* Update class names for the new "vrf" section */
+  opacity: 0.6;
+}
+
+.vrf .vrf-slider .swiper-pagination {
+  /* Update class names for the new "vrf" section */
+  margin-top: 20px;
+  position: relative;
+}
+
+.vrf .vrf-slider .swiper-pagination .swiper-pagination-bullet {
+  /* Update class names for the new "vrf" section */
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #4154f1;
+}
+
+.vrf .vrf-slider .swiper-pagination .swiper-pagination-bullet-active {
+  /* Update class names for the new "vrf" section */
+  background-color: #4154f1;
+}
+
+/*--------------------------------------------------------------
+# VRf slider end
+--------------------------------------------------------------*/
+
+.vrf .content h2 {
+  font-weight: 700;
+  font-size: 50px;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+}
+
+.vrf .content h3 {
+  font-weight: 700;
+  font-size: 36px;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+}
+
+.vrf .content p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 30px 0;
+  color: #365678;
+}
+
+.vrf .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vrf .content ul li {
+  padding: 0 0 15px 26px;
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.vrf .content ul i {
+  position: absolute;
+  font-size: 20px;
+  left: 0;
+  top: -3px;
+  color: var(--color-primary);
+}
+
+.vrf-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align items to the start */
+}
+
+.vrf-item-container .vrf-item {
+  width: calc(26% - 20px); /* Adjust width to fit 4 vrfs */
+  margin-bottom: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .vrf-item-container .vrf-item {
+    width: calc(33.33% - 20px); /* Adjust width to fit 2 vrfs */
+  }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 767px) {
+  .vrf-item-container .vrf-item {
+    width: calc(50% - 20px); /* Adjust width to fit 2 vrfs */
+  }
+}
+@media (max-width: 479px) {
+  .vrf-item-container .vrf-item {
+    width: calc(100% - 20px); /* Adjust width to fit 2 vrfs */
+  }
+}
