@@ -813,9 +813,9 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="vrv-item">
           <div class="vrv-sh">
-            <a href="${product.imageUrl}" data-gallery="vrvs-gallery-app" class="glightbox">
+            <div>
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
-            </a>
+            </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
             </div>
@@ -886,9 +886,9 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="vrv-item">
           <div class="vrv-sh">
-            <a href="${product.imageUrl}" data-gallery="vrvs-gallery-app" class="glightbox">
+            <div>
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
-            </a>
+            </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
             </div>
