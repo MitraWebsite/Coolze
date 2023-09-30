@@ -767,8 +767,7 @@ function renderVrvSection(products, sectionId) {
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </a>
             <div class="vrvs-info">
-              <h6 style="font-weight: bolder">${product.title}</h6>
-              <p>${product.description}</p>
+              <h6 style="text-align: center">${product.title}</h6>
             </div>
           </div>
         </div>`;
@@ -793,8 +792,7 @@ function renderVrvSection(products, sectionId) {
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </a>
             <div class="vrvs-info">
-              <h6 style="font-weight: bolder">${product.title}</h6>
-              <p>${product.description}</p>
+              <h6 style="text-align: center">${product.title}</h6>
             </div>
           </div>
         </div>`;
@@ -819,8 +817,7 @@ function renderVrvSection(products, sectionId) {
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </a>
             <div class="vrvs-info">
-              <h6 style="font-weight: bolder">${product.title}</h6>
-              <p>${product.description}</p>
+              <h6 style="text-align: center">${product.title}</h6>
             </div>
           </div>
         </div>`;
@@ -843,8 +840,7 @@ function renderVrvSection(products, sectionId) {
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </a>
             <div class="vrvs-info">
-              <h6 style="font-weight: bolder">${product.title}</h6>
-              <p>${product.description}</p>
+              <h6 style="text-align: center">${product.title}</h6>
             </div>
           </div>
         </div>`;
@@ -869,8 +865,7 @@ function renderVrvSection(products, sectionId) {
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </a>
             <div class="vrvs-info">
-              <h6 style="font-weight: bolder">${product.title}</h6>
-              <p>${product.description}</p>
+              <h6 style="text-align: center">${product.title}</h6>
             </div>
           </div>
         </div>`;
@@ -895,8 +890,7 @@ function renderVrvSection(products, sectionId) {
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </a>
             <div class="vrvs-info">
-              <h6 style="font-weight: bolder">${product.title}</h6>
-              <p>${product.description}</p>
+              <h6 style="text-align: center">${product.title}</h6>
             </div>
           </div>
         </div>`;
@@ -916,8 +910,7 @@ function renderVrvSection(products, sectionId) {
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </a>
             <div class="vrvs-info">
-              <h6 style="font-weight: bolder">${product.title}</h6>
-              <p>${product.description}</p>
+              <h6 style="text-align: center">${product.title}</h6>
             </div>
           </div>
         </div>`;
@@ -938,81 +931,123 @@ function renderVrvSection(products, sectionId) {
 
 const vrvWallMounted = [
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "F2 Inverter Series",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
+    title: "Daikin AC Wall Mounted Inverter",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 
 const vrvCassette = [
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl:
+      "assets/img/product/vrv/daikin/cassette/cassette-inverter-thailand.jpg",
+    title: "Daikin AC Cassette Inverter Thailand",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product 2",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl:
+      "assets/img/product/vrv/daikin/cassette/cassette-kiriu-malaysia.jpg",
+    title:
+      "Daikin AC Surround Cassette Kiriu Skyair Smart Inverter Malaysia R32",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product 3",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl:
+      "assets/img/product/vrv/daikin/cassette/cassette-malaysia-standard.jpg",
+    title: "Daikin AC Cassette Standard  Malaysia",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product 4",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl: "assets/img/product/vrv/daikin/cassette/cassette-thailand.jpeg",
+    title: "Daikin AC Cassette Standard Thailand",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
+
 const vrvCeilingMountedDuct = [
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl:
+      "assets/img/product/vrv/daikin/ducting/slim-low-static-standard.jpeg",
+    title: "Slim Low Static Standard",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl:
+      "assets/img/product/vrv/daikin/ducting/slim-low-static-compact.jpg",
+    title: "Slim Low Static Compact",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl:
+      "assets/img/product/vrv/daikin/ducting/middle-static-pressure.jpeg",
+    title: "Middle Static Pressure",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl: "assets/img/product/vrv/daikin/ducting/high-static-pressure.jpeg",
+    title: "High Static Pressure",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
+];
+
+const vrvCeilingSuspended = [
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
+    title: "F2 Inverter Series",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
+];
+const vrvFloorStanding = [
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
+    title: "F2 Inverter Series",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
+];
+const vrvFloorStandingDuct = [
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "Another Product",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
+    title: "F2 Inverter Series",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+];
+const vrvAirHandlingUnit = [
+  {
+    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
+    title: "F2 Inverter Series",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+];
+const vrvAirTreatment = [
+  {
+    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
+    title: "F2 Inverter Series",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 
 const vrvControlIndividual = [
   {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    imageUrl: "assets/img/product/vrv/daikin/cassette/cassette-thailand.jpg",
     title: "F2 Inverter Series",
-    description: "Lorem ipsum, dolor sit amet consectetur",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+];
+const vrvControlCentral = [
+  {
+    imageUrl: "assets/img/product/vrv/daikin/cassette/cassette-thailand.jpg",
+    title: "F2 Inverter Series",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 
 renderVrvSection(vrvWallMounted, "vrvWallMounted");
 renderVrvSection(vrvCassette, "vrvCassette");
 renderVrvSection(vrvCeilingMountedDuct, "vrvCeilingMountedDuct");
+renderVrvSection(vrvCeilingSuspended, "vrvCeilingSuspended");
+renderVrvSection(vrvFloorStanding, "vrvFloorStanding");
+renderVrvSection(vrvFloorStandingDuct, "vrvFloorStandingDuct");
+renderVrvSection(vrvAirHandlingUnit, "vrvAirHandlingUnit");
+renderVrvSection(vrvAirTreatment, "vrvAirTreatment");
+renderVrvSection(vrvControlCentral, "vrvControlCentral");
 renderVrvSection(vrvControlIndividual, "vrvControlIndividual");
