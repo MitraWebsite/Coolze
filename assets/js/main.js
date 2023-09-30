@@ -967,7 +967,7 @@ const vrvCassette = [
 const vrvCeilingMountedDuct = [
   {
     imageUrl:
-      "assets/img/product/vrv/daikin/ducting/slim-low-static-standard.jpeg",
+      "assets/img/product/vrv/daikin/ducting/slim-low-static-standard.jpg",
     title: "Slim Low Static Standard",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
@@ -979,12 +979,12 @@ const vrvCeilingMountedDuct = [
   },
   {
     imageUrl:
-      "assets/img/product/vrv/daikin/ducting/middle-static-pressure.jpeg",
+      "assets/img/product/vrv/daikin/ducting/middle-static-pressure.jpg",
     title: "Middle Static Pressure",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl: "assets/img/product/vrv/daikin/ducting/high-static-pressure.jpeg",
+    imageUrl: "assets/img/product/vrv/daikin/ducting/high-static-pressure.jpg",
     title: "High Static Pressure",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
@@ -992,51 +992,90 @@ const vrvCeilingMountedDuct = [
 
 const vrvCeilingSuspended = [
   {
-    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
-    title: "F2 Inverter Series",
+    imageUrl: "assets/img/product/vrv/daikin/ceiling-suspended.jpg",
+    title: "Ceiling Suspended",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 const vrvFloorStanding = [
   {
-    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
-    title: "F2 Inverter Series",
+    imageUrl:
+      "assets/img/product/vrv/daikin/floor-standing/daikin-floor-standing-inverter.jpg",
+    title: "Floor Standing Inverter",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl:
+      "assets/img/product/vrv/daikin/floor-standing/daikin-inverter-concealed.jpg",
+    title: "Floor Standing Inverter Concealed",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 const vrvFloorStandingDuct = [
   {
-    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
-    title: "F2 Inverter Series",
+    imageUrl: "assets/img/product/vrv/daikin/floor-standing-duct-inverter.jpg",
+    title: "Floor Standing Duct Inverter",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 const vrvAirHandlingUnit = [
   {
-    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
-    title: "F2 Inverter Series",
+    imageUrl: "assets/img/product/vrv/daikin/air-handling-unit-inverter.jpg",
+    title: "Air Handling Unit Inverter",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 const vrvAirTreatment = [
   {
-    imageUrl: "assets/img/product/vrv/daikin/wall-mounted-inverter.jpg",
-    title: "F2 Inverter Series",
+    imageUrl:
+      "assets/img/product/vrv/daikin/air-treatment/outdoor-air-processing-unit.jpg",
+    title: "Outdoor Air Processing Unit",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl:
+      "assets/img/product/vrv/daikin/air-treatment/heat-reclaim-ventilator.jpg",
+    title: "Heat Reclaim Ventilator",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl:
+      "assets/img/product/vrv/daikin/air-treatment/heat-reclaim-ventilator-vam.jpg",
+    title: "Heat Reclaim Ventilator Vam",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 
 const vrvControlIndividual = [
   {
-    imageUrl: "assets/img/product/vrv/daikin/cassette/cassette-thailand.jpg",
-    title: "F2 Inverter Series",
+    imageUrl:
+      "assets/img/product/vrv/daikin/controller/navigation-remote-controller-wired.jpg",
+    title: "Navigation Remote Controller Wired",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl:
+      "assets/img/product/vrv/daikin/controller/wireless-remote-controller.jpg",
+    title: "Wireless Remote Controller",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl:
+      "assets/img/product/vrv/daikin/controller/simplified-remote-controller-wired.jpg",
+    title: "Simplified Remote Controller Wired",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 const vrvControlCentral = [
   {
-    imageUrl: "assets/img/product/vrv/daikin/cassette/cassette-thailand.jpg",
-    title: "F2 Inverter Series",
+    imageUrl:
+      "assets/img/product/vrv/daikin/central-control/intelligent-touch-manager-system.jpg",
+    title: "Intelligent Touch Manager System",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/vrv/daikin/central-control/reiri.jpg",
+    title: "Reiri Controller System",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
