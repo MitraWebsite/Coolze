@@ -3276,7 +3276,7 @@ section {
 .vrv-item-container .vrv-item {
   width: calc(26% - 20px); /* Adjust width to fit 4 vrvs */
   margin-bottom: 20px;
-  padding: 0 20px;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
@@ -3290,5 +3290,10 @@ section {
 @media (max-width: 767px) {
   .vrv-item-container .vrv-item {
     width: calc(50% - 20px); /* Adjust width to fit 2 vrvs */
+  }
+}
+@media (max-width: 479px) {
+  .vrv-item-container .vrv-item {
+    width: calc(100% - 20px); /* Adjust width to fit 2 vrvs */
   }
 }

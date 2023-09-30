@@ -942,16 +942,6 @@ const vrvWallMounted = [
     title: "F2 Inverter Series",
     description: "Lorem ipsum, dolor sit amet consectetur",
   },
-  {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "F2 Inverter Series",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-  },
-  {
-    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
-    title: "F2 Inverter Series",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-  },
 ];
 
 const vrvCassette = [
