@@ -314,54 +314,87 @@ document.addEventListener("DOMContentLoaded", () => {
   /**
    * Project isotope and filter
    */
-  let projectnIsotope = document.querySelector(".project-isotope");
+  // let projectnIsotope = document.querySelector(".project-isotope");
 
-  if (projectnIsotope) {
-    let projectFilter = projectnIsotope.getAttribute("data-project-filter")
-      ? projectnIsotope.getAttribute("data-project-filter")
-      : "*";
-    let projectLayout = projectnIsotope.getAttribute("data-project-layout")
-      ? projectnIsotope.getAttribute("data-project-layout")
-      : "masonry";
-    let projectSort = projectnIsotope.getAttribute("data-project-sort")
-      ? projectnIsotope.getAttribute("data-project-sort")
-      : "original-order";
+  // if (projectnIsotope) {
+  //   let projectFilter = projectnIsotope.getAttribute("data-project-filter")
+  //     ? projectnIsotope.getAttribute("data-project-filter")
+  //     : "*";
+  //   let projectLayout = projectnIsotope.getAttribute("data-project-layout")
+  //     ? projectnIsotope.getAttribute("data-project-layout")
+  //     : "masonry";
+  //   let projectSort = projectnIsotope.getAttribute("data-project-sort")
+  //     ? projectnIsotope.getAttribute("data-project-sort")
+  //     : "original-order";
 
-    window.addEventListener("load", () => {
-      let projectIsotope = new Isotope(
-        document.querySelector(".project-container"),
-        {
-          itemSelector: ".project-item",
-          layoutMode: projectLayout,
-          filter: projectFilter,
-          sortBy: projectSort,
-        }
-      );
+  //   window.addEventListener("load", () => {
+  //     let projectIsotope = new Isotope(
+  //       document.querySelector(".project-container"),
+  //       {
+  //         itemSelector: ".project-item",
+  //         layoutMode: projectLayout,
+  //         filter: projectFilter,
+  //         sortBy: projectSort,
+  //       }
+  //     );
 
-      let menuFilters = document.querySelectorAll(
-        ".project-isotope .project-flters li"
-      );
-      menuFilters.forEach(function (el) {
-        el.addEventListener(
-          "click",
-          function () {
-            document
-              .querySelector(".project-isotope .project-flters .filter-active")
-              .classList.remove("filter-active");
-            this.classList.add("filter-active");
-            projectIsotope.arrange({
-              filter: this.getAttribute("data-filter"),
-            });
-            if (typeof aos_init === "function") {
-              aos_init();
-            }
-          },
-          false
-        );
-      });
+  //     let menuFilters = document.querySelectorAll(
+  //       ".project-isotope .project-flters li"
+  //     );
+  //     menuFilters.forEach(function (el) {
+  //       el.addEventListener(
+  //         "click",
+  //         function () {
+  //           document
+  //             .querySelector(".project-isotope .project-flters .filter-active")
+  //             .classList.remove("filter-active");
+  //           this.classList.add("filter-active");
+  //           projectIsotope.arrange({
+  //             filter: this.getAttribute("data-filter"),
+  //           });
+  //           if (typeof aos_init === "function") {
+  //             aos_init();
+  //           }
+  //         },
+  //         false
+  //       );
+  //     });
+  //   });
+  // }
+
+  function filterProject(filterParam) {
+    const filterItems = document.querySelectorAll(".project-flters li");
+    filterItems.forEach((item) => {
+      item.classList.remove("filter-active");
+      if (item.getAttribute("data-filter") === `.${filterParam}`) {
+        item.classList.add("filter-active");
+      }
     });
+  
+    const projectItems = document.querySelectorAll(".project-item");
+    projectItems.forEach((project) => {
+      project.style.display = "none";
+    });
+  
+    if (filterParam === "*") {
+      projectItems.forEach((project) => {
+        project.style.display = "block";
+      });
+    } else {
+      const filteredProjects = document.querySelectorAll(`.project-item.${filterParam}`);
+      filteredProjects.forEach((project) => {
+        project.style.display = "block";
+      });
+    }
   }
-
+  
+  const projectFilters = document.querySelectorAll(".project-flters li");
+  projectFilters.forEach((item) => {
+    item.addEventListener("click", function () {
+      const filterValue = this.getAttribute("data-filter").replace(".", "");
+      filterProject(filterValue);
+    });
+  });
   /**
    * Cassette isotope and filter
    */
