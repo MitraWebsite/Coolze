@@ -1166,49 +1166,6 @@ section {
 .clients .clients-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #4154f1;
 }
-
-/*--------------------------------------------------------------
-# VRV
---------------------------------------------------------------*/
-.vrv .vrv-slider .swiper-slide img {
-  /* Update class names for the new "vrv" section */
-  opacity: 1;
-  transition: 0.3s;
-  width: auto; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Center align the brand images within the slide */
-.vrv-slider .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.vrv .vrv-slider .swiper-slide img:hover {
-  /* Update class names for the new "vrv" section */
-  opacity: 0.6;
-}
-
-.vrv .vrv-slider .swiper-pagination {
-  /* Update class names for the new "vrv" section */
-  margin-top: 20px;
-  position: relative;
-}
-
-.vrv .vrv-slider .swiper-pagination .swiper-pagination-bullet {
-  /* Update class names for the new "vrv" section */
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #4154f1;
-}
-
-.vrv .vrv-slider .swiper-pagination .swiper-pagination-bullet-active {
-  /* Update class names for the new "vrv" section */
-  background-color: #4154f1;
-}
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -3222,6 +3179,53 @@ section {
 /*--------------------------------------------------------------
 # VRV Section
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# VRV slider
+--------------------------------------------------------------*/
+.vrv .vrv-slider .swiper-slide img {
+  /* Update class names for the new "vrv" section */
+  opacity: 1;
+  transition: 0.3s;
+  width: auto; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Center align the brand images within the slide */
+.vrv-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vrv .vrv-slider .swiper-slide img:hover {
+  /* Update class names for the new "vrv" section */
+  opacity: 0.6;
+}
+
+.vrv .vrv-slider .swiper-pagination {
+  /* Update class names for the new "vrv" section */
+  margin-top: 20px;
+  position: relative;
+}
+
+.vrv .vrv-slider .swiper-pagination .swiper-pagination-bullet {
+  /* Update class names for the new "vrv" section */
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #4154f1;
+}
+
+.vrv .vrv-slider .swiper-pagination .swiper-pagination-bullet-active {
+  /* Update class names for the new "vrv" section */
+  background-color: #4154f1;
+}
+
+/*--------------------------------------------------------------
+# VRV slider end
+--------------------------------------------------------------*/
+
 .vrv .content h2 {
   font-weight: 700;
   font-size: 50px;
@@ -3265,35 +3269,26 @@ section {
 
 .vrv-item-container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap onto the next line */
-  justify-content: space-between; /* Adjust this property to adjust the spacing */
-  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align items to the start */
 }
 
-.vrv-item-container .product-item {
-  width: 48%; /* Each product takes almost half of the container */
-  margin-bottom: 20px; /* Add some space between products */
+.vrv-item-container .vrv-item {
+  width: calc(26% - 20px); /* Adjust width to fit 4 vrvs */
+  margin-bottom: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.vrv-item-container .product-item img {
-  max-width: 100%;
-  height: auto;
-}
-
-.vrv-item-container .vrvs-info {
-  padding-top: 10px;
-  font-size: 14px;
-}
-
-.vrv-item-container .vrvs-info h6 {
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 5px;
+@media (max-width: 992px) {
+  .vrv-item-container .vrv-item {
+    width: calc(33.33% - 20px); /* Adjust width to fit 2 vrvs */
+  }
 }
 
 /* Adjustments for smaller screens */
 @media (max-width: 767px) {
-  .vrv-item-container .product-item {
-    width: 100%; /* Full width for products on smaller screens */
+  .vrv-item-container .vrv-item {
+    width: calc(50% - 20px); /* Adjust width to fit 2 vrvs */
   }
 }

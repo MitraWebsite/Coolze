@@ -141,42 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /**
-   * VRV Indoor Slider (similar settings with updated class names)
-   */
-  new Swiper(".vrv-slider", {
-    /* Update class name for the new "brands" section */ speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: "auto",
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 40,
-      },
-      480: {
-        slidesPerView: 2,
-        spaceBetween: 60,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 80,
-      },
-      992: {
-        slidesPerView: 4,
-        spaceBetween: 100,
-      },
-    },
-  });
-
-  /**
    * Scroll top button
    */
   const scrollTop = document.querySelector(".scroll-top");
@@ -745,3 +709,311 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// VRV Products ==============================================
+
+function renderVrvSection(products, sectionId) {
+  const productContainer = document.getElementById(sectionId);
+  let productHTML = "";
+
+  function initializeSwiper() {
+    // Initialize Swiper
+    new Swiper(`#${sectionId} .vrv-slider`, {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: "auto",
+      pagination: {
+        el: `#${sectionId} .swiper-pagination`,
+        type: "bullets",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 60,
+        },
+        767: {
+          slidesPerView: 3,
+          spaceBetween: 80,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 100,
+        },
+      },
+    });
+  }
+
+  // const screenWidth = window.innerWidth;
+
+  if (products.length < 5) {
+    window.addEventListener("load", () => {
+      const screenWidth = window.innerWidth;
+      productHTML = "";
+      if (screenWidth < 991.9 && products.length > 3) {
+        for (const product of products) {
+          productHTML += `
+        <div class="swiper-slide">
+          <div class="vrv-item">
+            <a href="${product.imageUrl}" data-gallery="products-gallery-app" class="glightbox">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </a>
+            <div class="vrvs-info">
+              <h6 style="font-weight: bolder">${product.title}</h6>
+              <p>${product.description}</p>
+            </div>
+          </div>
+        </div>`;
+        }
+
+        productContainer.innerHTML = `
+      <div class="vrv-slider swiper mt-4">
+        <div class="swiper-wrapper align-items-center">
+          ${productHTML}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>`;
+
+        // Initialize Swiper
+        initializeSwiper();
+      } else if (screenWidth < 766 && products.length > 2) {
+        for (const product of products) {
+          productHTML += `
+        <div class="swiper-slide">
+          <div class="vrv-item">
+            <a href="${product.imageUrl}" data-gallery="products-gallery-app" class="glightbox">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </a>
+            <div class="vrvs-info">
+              <h6 style="font-weight: bolder">${product.title}</h6>
+              <p>${product.description}</p>
+            </div>
+          </div>
+        </div>`;
+        }
+
+        productContainer.innerHTML = `
+      <div class="vrv-slider swiper mt-4">
+        <div class="swiper-wrapper align-items-center">
+          ${productHTML}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>`;
+
+        // Initialize Swiper
+        initializeSwiper();
+      } else {
+        for (const product of products) {
+          productHTML += `
+        <div class="vrv-item">
+          <div class="vrv-sh">
+            <a href="${product.imageUrl}" data-gallery="vrvs-gallery-app" class="glightbox">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </a>
+            <div class="vrvs-info">
+              <h6 style="font-weight: bolder">${product.title}</h6>
+              <p>${product.description}</p>
+            </div>
+          </div>
+        </div>`;
+        }
+        productContainer.innerHTML = `
+      <div class="vrv-item-container">
+        ${productHTML}
+      </div>`;
+      }
+    });
+    window.addEventListener("resize", () => {
+      const screenWidth = window.innerWidth;
+      productHTML = "";
+      if (screenWidth < 991.9 && products.length > 3) {
+        for (const product of products) {
+          productHTML += `
+        <div class="swiper-slide">
+          <div class="vrv-item">
+            <a href="${product.imageUrl}" data-gallery="products-gallery-app" class="glightbox">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </a>
+            <div class="vrvs-info">
+              <h6 style="font-weight: bolder">${product.title}</h6>
+              <p>${product.description}</p>
+            </div>
+          </div>
+        </div>`;
+        }
+
+        productContainer.innerHTML = `
+      <div class="vrv-slider swiper mt-4">
+        <div class="swiper-wrapper align-items-center">
+          ${productHTML}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>`;
+
+        // Initialize Swiper
+        initializeSwiper();
+      } else if (screenWidth < 766 && products.length > 2) {
+        for (const product of products) {
+          productHTML += `
+        <div class="swiper-slide">
+          <div class="vrv-item">
+            <a href="${product.imageUrl}" data-gallery="products-gallery-app" class="glightbox">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </a>
+            <div class="vrvs-info">
+              <h6 style="font-weight: bolder">${product.title}</h6>
+              <p>${product.description}</p>
+            </div>
+          </div>
+        </div>`;
+        }
+
+        productContainer.innerHTML = `
+      <div class="vrv-slider swiper mt-4">
+        <div class="swiper-wrapper align-items-center">
+          ${productHTML}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>`;
+
+        // Initialize Swiper
+        initializeSwiper();
+      } else {
+        for (const product of products) {
+          productHTML += `
+        <div class="vrv-item">
+          <div class="vrv-sh">
+            <a href="${product.imageUrl}" data-gallery="vrvs-gallery-app" class="glightbox">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </a>
+            <div class="vrvs-info">
+              <h6 style="font-weight: bolder">${product.title}</h6>
+              <p>${product.description}</p>
+            </div>
+          </div>
+        </div>`;
+        }
+        productContainer.innerHTML = `
+      <div class="vrv-item-container">
+        ${productHTML}
+      </div>`;
+      }
+    });
+  } else {
+    for (const product of products) {
+      productHTML += `
+        <div class="swiper-slide">
+          <div class="vrv-item">
+            <a href="${product.imageUrl}" data-gallery="products-gallery-app" class="glightbox">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </a>
+            <div class="vrvs-info">
+              <h6 style="font-weight: bolder">${product.title}</h6>
+              <p>${product.description}</p>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    productContainer.innerHTML = `
+      <div class="vrv-slider swiper mt-4">
+        <div class="swiper-wrapper align-items-center">
+          ${productHTML}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>`;
+
+    // Initialize Swiper
+    initializeSwiper();
+  }
+}
+
+const vrvWallMounted = [
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "F2 Inverter Series",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "F2 Inverter Series",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "F2 Inverter Series",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+];
+
+const vrvCassette = [
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product 1",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product 2",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product 3",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product 4",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+];
+const vrvCeilingMountedDuct = [
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "Another Product",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+];
+
+renderVrvSection(vrvWallMounted, "vrvWallMounted");
+renderVrvSection(vrvCassette, "vrvCassette");
+renderVrvSection(vrvCeilingMountedDuct, "vrvCeilingMountedDuct");
