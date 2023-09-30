@@ -1004,6 +1004,15 @@ const vrvCeilingMountedDuct = [
   },
 ];
 
+const vrvControlIndividual = [
+  {
+    imageUrl: "assets/img/product/split-wall/gree/f1s-inverter-series3.jpg",
+    title: "F2 Inverter Series",
+    description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+];
+
 renderVrvSection(vrvWallMounted, "vrvWallMounted");
 renderVrvSection(vrvCassette, "vrvCassette");
 renderVrvSection(vrvCeilingMountedDuct, "vrvCeilingMountedDuct");
+renderVrvSection(vrvControlIndividual, "vrvControlIndividual");
