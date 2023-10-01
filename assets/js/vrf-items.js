@@ -51,7 +51,7 @@ function renderVrfSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrf-item">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrfs-info">
@@ -76,7 +76,7 @@ function renderVrfSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrf-item">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrfs-info">
@@ -101,7 +101,7 @@ function renderVrfSection(products, sectionId) {
           productHTML += `
         <div class="vrf-item">
           <div class="vrf-sh">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrfs-info">
@@ -220,101 +220,84 @@ function renderVrfSection(products, sectionId) {
 const vrfWallMounted = [
   {
     imageUrl: "assets/img/product/vrf/wall-mounted-inverter.jpg",
-    title: "Gree AC Wall Mounted Inverter",
+    title: "Wall Mounted Inverter",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 
 const vrfCassette = [
   {
-    imageUrl:
-      "assets/img/product/vrf/daikin/cassette/cassette-inverter-thailand.jpg",
-    title: "Daikin AC Cassette Inverter Thailand",
+    imageUrl: "assets/img/product/vrf/cassette/inverter-1-way.jpg",
+    title: "Cassette Inverter 1 Way",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl:
-      "assets/img/product/vrf/daikin/cassette/cassette-kiriu-malaysia.jpg",
-    title:
-      "Daikin AC Surround Cassette Kiriu Skyair Smart Inverter Malaysia R32",
+    imageUrl: "assets/img/product/vrf/cassette/inverter-2-way.jpg",
+    title: "Cassette Inverter 2 Way",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl:
-      "assets/img/product/vrf/daikin/cassette/cassette-malaysia-standard.jpg",
-    title: "Daikin AC Cassette Standard  Malaysia",
+    imageUrl: "assets/img/product/vrf/cassette/inverter-4-way.jpg",
+    title: "Cassette Inverter 4 Way",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl: "assets/img/product/vrf/daikin/cassette/cassette-thailand.jpeg",
-    title: "Daikin AC Cassette Standard Thailand",
+    imageUrl: "assets/img/product/vrf/cassette/inverter-4-way-compact.jpg",
+    title: "Cassette Inverter 4 Way Compact",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/vrf/cassette/inverter-360.jpg",
+    title: "Cassette Inverter 360",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl: "assets/img/product/vrf/cassette/inverter-360-compact.jpg",
+    title: "Cassette Inverter 360 Compact",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 
 const vrfCeilingMountedDuct = [
   {
-    imageUrl:
-      "assets/img/product/vrf/daikin/ducting/slim-low-static-standard.jpg",
-    title: "Slim Low Static Standard",
+    imageUrl: "assets/img/product/vrf/ducting/low-static.jpg",
+    title: "Low Static Standard",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl:
-      "assets/img/product/vrf/daikin/ducting/slim-low-static-compact.jpg",
-    title: "Slim Low Static Compact",
-    //description: "Lorem ipsum, dolor sit amet consectetur",
-  },
-  {
-    imageUrl:
-      "assets/img/product/vrf/daikin/ducting/middle-static-pressure.jpg",
-    title: "Middle Static Pressure",
-    //description: "Lorem ipsum, dolor sit amet consectetur",
-  },
-  {
-    imageUrl: "assets/img/product/vrf/daikin/ducting/high-static-pressure.jpg",
-    title: "High Static Pressure",
+    imageUrl: "assets/img/product/vrf/ducting/high-static.jpg",
+    title: "High Static",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 const vrfFloorStanding = [
   {
-    imageUrl:
-      "assets/img/product/vrf/daikin/floor-standing/daikin-floor-standing-inverter.jpg",
+    imageUrl: "assets/img/product/vrf/floor-standing/inverter.jpg",
     title: "Floor Standing Inverter",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl:
-      "assets/img/product/vrf/daikin/floor-standing/daikin-inverter-concealed.jpg",
-    title: "Floor Standing Inverter Concealed",
+    imageUrl: "assets/img/product/vrf/floor-standing/inverter-ceiling.jpg",
+    title: "Floor Standing Inverter Ceiling",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 const vrfFreshAir = [
   {
-    imageUrl: "assets/img/product/vrf/daikin/air-handling-unit-inverter.jpg",
-    title: "Air Handling Unit Inverter",
+    imageUrl: "assets/img/product/vrf/fresh-air/inverter.jpg",
+    title: "Fresh Air Inverter",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 const vrfVentilation = [
   {
-    imageUrl:
-      "assets/img/product/vrf/daikin/air-treatment/outdoor-air-processing-unit.jpg",
-    title: "Outdoor Air Processing Unit",
+    imageUrl: "assets/img/product/vrf/ventilation/erv-standard.jpg",
+    title: "ERV Standard",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl:
-      "assets/img/product/vrf/daikin/air-treatment/heat-reclaim-ventilator.jpg",
-    title: "Heat Reclaim Ventilator",
-    //description: "Lorem ipsum, dolor sit amet consectetur",
-  },
-  {
-    imageUrl:
-      "assets/img/product/vrf/daikin/air-treatment/heat-reclaim-ventilator-vam.jpg",
-    title: "Heat Reclaim Ventilator Vam",
+    imageUrl: "assets/img/product/vrf/ventilation/erv-dx-coil.jpg",
+    title: "ERV DX Coil",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
@@ -322,33 +305,38 @@ const vrfVentilation = [
 const vrfControlIndividual = [
   {
     imageUrl:
-      "assets/img/product/vrf/daikin/controller/navigation-remote-controller-wired.jpg",
-    title: "Navigation Remote Controller Wired",
+      "assets/img/product/vrf/individual-controllers/wired-control-xk46.png",
+    title: "Wired Control XK46",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
     imageUrl:
-      "assets/img/product/vrf/daikin/controller/wireless-remote-controller.jpg",
+      "assets/img/product/vrf/individual-controllers/wireless-controller.jpg",
     title: "Wireless Remote Controller",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
     imageUrl:
-      "assets/img/product/vrf/daikin/controller/simplified-remote-controller-wired.jpg",
-    title: "Simplified Remote Controller Wired",
+      "assets/img/product/vrf/individual-controllers/wired-control-xk55.jpg",
+    title: "Wired Control XK55",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl:
+      "assets/img/product/vrf/individual-controllers/wired-control-xk79.jpg",
+    title: "Wired Control XK79 (Hotel)",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
 const vrfControlCentral = [
   {
-    imageUrl:
-      "assets/img/product/vrf/daikin/central-control/intelligent-touch-manager-system.jpg",
-    title: "Intelligent Touch Manager System",
+    imageUrl: "assets/img/product/vrf/central-control/smart-zone.png",
+    title: "Smart Zone Conroller System",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl: "assets/img/product/vrf/daikin/central-control/reiri.jpg",
-    title: "Reiri Controller System",
+    imageUrl: "assets/img/product/vrf/central-control/Esmart-zone.jpg",
+    title: "Esmart Zone Conroller System",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
