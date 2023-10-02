@@ -97,6 +97,7 @@ section {
   margin-bottom: 0;
 }
 
+
 /* Typewriter Font */
 .hero .hero-subtitle {
   color: #43aee0;
@@ -597,7 +598,8 @@ section {
 .hero {
   width: 100%;
   height: 120vh;
-  background: url("../img/HVAC/vrv-ac-outside.jpg") top center;
+  /* background: url("../img/HVAC/vrv-ac-outside.jpg") top center; */
+  background: url("../img/vrv-3.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 500px 0;
@@ -660,6 +662,15 @@ section {
 
 .hero .container {
   z-index: 1;
+}
+
+.hero h1{
+  font-size: inherit; /* Inherit the font size from its parent */
+  font-weight: inherit; /* Inherit the font weight from its parent */
+  font-family: inherit; /* Inherit the font family from its parent */
+  line-height: inherit; /* Inherit the line height from its parent */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
 }
 
 .hero h2 {
@@ -1166,6 +1177,46 @@ section {
 .clients .clients-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #4154f1;
 }
+
+/* Just Addedd Test Documentation*/
+/*--------------------------------------------------------------
+# Documentation
+--------------------------------------------------------------*/
+.documentation .documentation-slider .swiper-slide img {
+  height: 250px;
+  width: auto;
+  border: 4px solid #9a9494;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.documentation .documentation-slider.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.documentation .documentation-slider .swiper-slide img:hover {
+  opacity: 0.5;
+}
+
+.documentation .documentation-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+  /* background-color: #165a7c; */
+}
+
+.documentation .documentation-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #4154f1;
+}
+
+.documentation .documentation-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #4154f1;
+}
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -1505,7 +1556,7 @@ section {
 /*--------------------------------------------------------------
 # Documentation Section
 --------------------------------------------------------------*/
-.documentations .documentation-item {
+/* .documentations .documentation-item {
   box-sizing: content-box;
   padding: 30px;
   width: auto;
@@ -1521,9 +1572,9 @@ section {
 
 .documentations .documentation-item .documentation-img {
   height: 320px;
-  width: auto;
+  width: auto; */
   /* border-radius: 50%; */
-  border: 4px solid #9a9494;
+  /* border: 4px solid #9a9494;
   margin: 0 auto;
 }
 
@@ -1584,7 +1635,7 @@ section {
     opacity: 1;
     transform: scale(1.12);
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Testimonials Section
