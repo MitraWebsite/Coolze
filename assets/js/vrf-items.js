@@ -96,6 +96,31 @@ function renderVrfSection(products, sectionId) {
 
         // Initialize Swiper
         initializeSwiper();
+      } else if (screenWidth < 480 && products.length > 1) {
+        for (const product of products) {
+          productHTML += `
+        <div class="swiper-slide">
+          <div class="vrf-item">
+            <div style="text-align: center">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </div>
+            <div class="vrfs-info">
+              <h6 style="text-align: center">${product.title}</h6>
+            </div>
+          </div>
+        </div>`;
+        }
+
+        productContainer.innerHTML = `
+      <div class="vrf-slider swiper mt-4">
+        <div class="swiper-wrapper align-items-center">
+          ${productHTML}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>`;
+
+        // Initialize Swiper
+        initializeSwiper();
       } else {
         for (const product of products) {
           productHTML += `
@@ -124,7 +149,7 @@ function renderVrfSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrf-item">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrfs-info">
@@ -149,7 +174,32 @@ function renderVrfSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrf-item">
-            <div>
+            <div style="text-align: center">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </div>
+            <div class="vrfs-info">
+              <h6 style="text-align: center">${product.title}</h6>
+            </div>
+          </div>
+        </div>`;
+        }
+
+        productContainer.innerHTML = `
+      <div class="vrf-slider swiper mt-4">
+        <div class="swiper-wrapper align-items-center">
+          ${productHTML}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>`;
+
+        // Initialize Swiper
+        initializeSwiper();
+      } else if (screenWidth < 480 && products.length > 1) {
+        for (const product of products) {
+          productHTML += `
+        <div class="swiper-slide">
+          <div class="vrf-item">
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrfs-info">
@@ -174,7 +224,7 @@ function renderVrfSection(products, sectionId) {
           productHTML += `
         <div class="vrf-item">
           <div class="vrf-sh">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrfs-info">
@@ -194,7 +244,7 @@ function renderVrfSection(products, sectionId) {
       productHTML += `
         <div class="swiper-slide">
           <div class="vrf-item">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrfs-info">
@@ -305,7 +355,7 @@ const vrfVentilation = [
 const vrfControlIndividual = [
   {
     imageUrl:
-      "assets/img/product/vrf/individual-controllers/wired-control-xk46.png",
+      "assets/img/product/vrf/individual-controllers/wired-control-xk46.jpg",
     title: "Wired Control XK46",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
@@ -330,7 +380,7 @@ const vrfControlIndividual = [
 ];
 const vrfControlCentral = [
   {
-    imageUrl: "assets/img/product/vrf/central-control/smart-zone.png",
+    imageUrl: "assets/img/product/vrf/central-control/smart-zone.jpg",
     title: "Smart Zone Conroller System",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
