@@ -311,19 +311,26 @@ const vrvCeilingMountedDuct = [
   },
   {
     imageUrl:
-      "assets/img/product/vrv/daikin/ducting/slim-low-static-compact.jpg",
+      "assets/img/product/vrv/daikin/ducting/slim-low-static-compact.png",
     title: "Slim Low Static Compact",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
     imageUrl:
-      "assets/img/product/vrv/daikin/ducting/middle-static-pressure.jpg",
+      "assets/img/product/vrv/daikin/ducting/middle-static-pressure.png",
     title: "Middle Static Pressure",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
   {
-    imageUrl: "assets/img/product/vrv/daikin/ducting/high-static-pressure.jpg",
-    title: "High Static Pressure",
+    imageUrl:
+      "assets/img/product/vrv/daikin/ducting/high-static-pressure-mve4.png",
+    title: "High Static Pressure MVE 4",
+    //description: "Lorem ipsum, dolor sit amet consectetur",
+  },
+  {
+    imageUrl:
+      "assets/img/product/vrv/daikin/ducting/high-static-pressure-pvm.png",
+    title: "High Static Pressure PVM",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
 ];
