@@ -51,7 +51,7 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrv-item">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrvs-info">
@@ -76,7 +76,32 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrv-item">
-            <div>
+            <div style="text-align: center">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </div>
+            <div class="vrvs-info">
+              <h6 style="text-align: center">${product.title}</h6>
+            </div>
+          </div>
+        </div>`;
+        }
+
+        productContainer.innerHTML = `
+      <div class="vrv-slider swiper mt-4">
+        <div class="swiper-wrapper align-items-center">
+          ${productHTML}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>`;
+
+        // Initialize Swiper
+        initializeSwiper();
+      } else if (screenWidth < 480 && products.length > 1) {
+        for (const product of products) {
+          productHTML += `
+        <div class="swiper-slide">
+          <div class="vrv-item">
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrvs-info">
@@ -101,7 +126,7 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="vrv-item">
           <div class="vrv-sh">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrvs-info">
@@ -124,7 +149,7 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrv-item">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrvs-info">
@@ -149,7 +174,32 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="swiper-slide">
           <div class="vrv-item">
-            <div>
+            <div style="text-align: center">
+              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+            </div>
+            <div class="vrvs-info">
+              <h6 style="text-align: center">${product.title}</h6>
+            </div>
+          </div>
+        </div>`;
+        }
+
+        productContainer.innerHTML = `
+      <div class="vrv-slider swiper mt-4">
+        <div class="swiper-wrapper align-items-center">
+          ${productHTML}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>`;
+
+        // Initialize Swiper
+        initializeSwiper();
+      } else if (screenWidth < 480 && products.length > 1) {
+        for (const product of products) {
+          productHTML += `
+        <div class="swiper-slide">
+          <div class="vrv-item">
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrvs-info">
@@ -174,7 +224,7 @@ function renderVrvSection(products, sectionId) {
           productHTML += `
         <div class="vrv-item">
           <div class="vrv-sh">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrvs-info">
@@ -194,7 +244,7 @@ function renderVrvSection(products, sectionId) {
       productHTML += `
         <div class="swiper-slide">
           <div class="vrv-item">
-            <div>
+            <div style="text-align: center">
               <img src="${product.imageUrl}" class="img-fluid" alt="" />
             </div>
             <div class="vrvs-info">
@@ -255,7 +305,7 @@ const vrvCassette = [
 const vrvCeilingMountedDuct = [
   {
     imageUrl:
-      "assets/img/product/vrv/daikin/ducting/slim-low-static-standard.jpg",
+      "assets/img/product/vrv/daikin/ducting/slim-low-static-standard.png",
     title: "Slim Low Static Standard",
     //description: "Lorem ipsum, dolor sit amet consectetur",
   },
