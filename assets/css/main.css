@@ -97,6 +97,7 @@ section {
   margin-bottom: 0;
 }
 
+
 /* Typewriter Font */
 .hero .hero-subtitle {
   color: #43aee0;
@@ -661,6 +662,15 @@ section {
 
 .hero .container {
   z-index: 1;
+}
+
+.hero h1{
+  font-size: inherit; /* Inherit the font size from its parent */
+  font-weight: inherit; /* Inherit the font weight from its parent */
+  font-family: inherit; /* Inherit the font family from its parent */
+  line-height: inherit; /* Inherit the line height from its parent */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
 }
 
 .hero h2 {
