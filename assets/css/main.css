@@ -2799,6 +2799,21 @@ section {
   margin-bottom: 0;
 }
 
+.social-icon {
+  display: inline-block;
+  margin-right: 20px; /* Adjust the margin as needed */
+  text-decoration: none;
+  color: #333; /* Set your desired text color */
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .social-icon {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    margin-right: 10px; /* Reduce margin for smaller screens */
+  }
+}
 /*--------------------------------------------------------------
 # Blog Sidebar
 --------------------------------------------------------------*/
