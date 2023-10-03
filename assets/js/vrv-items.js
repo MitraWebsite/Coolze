@@ -52,7 +52,7 @@ function renderVrvSection(products, sectionId) {
         <div class="swiper-slide">
           <div class="vrv-item">
             <div style="text-align: center">
-              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+              <img src="${product.imageUrl}" class="img-fluid" alt="${product.title}" />
             </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
@@ -77,7 +77,7 @@ function renderVrvSection(products, sectionId) {
         <div class="swiper-slide">
           <div class="vrv-item">
             <div style="text-align: center">
-              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+              <img src="${product.imageUrl}" class="img-fluid" alt="${product.title}" />
             </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
@@ -102,7 +102,7 @@ function renderVrvSection(products, sectionId) {
         <div class="swiper-slide">
           <div class="vrv-item">
             <div style="text-align: center">
-              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+              <img src="${product.imageUrl}" class="img-fluid" alt="${product.title}" />
             </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
@@ -127,7 +127,7 @@ function renderVrvSection(products, sectionId) {
         <div class="vrv-item">
           <div class="vrv-sh">
             <div style="text-align: center">
-              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+              <img src="${product.imageUrl}" class="img-fluid" alt="${product.title}" />
             </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
@@ -150,7 +150,7 @@ function renderVrvSection(products, sectionId) {
         <div class="swiper-slide">
           <div class="vrv-item">
             <div style="text-align: center">
-              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+              <img src="${product.imageUrl}" class="img-fluid" alt="${product.title}" />
             </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
@@ -175,7 +175,7 @@ function renderVrvSection(products, sectionId) {
         <div class="swiper-slide">
           <div class="vrv-item">
             <div style="text-align: center">
-              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+              <img src="${product.imageUrl}" class="img-fluid" alt="${product.title}" />
             </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
@@ -200,7 +200,7 @@ function renderVrvSection(products, sectionId) {
         <div class="swiper-slide">
           <div class="vrv-item">
             <div style="text-align: center">
-              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+              <img src="${product.imageUrl}" class="img-fluid" alt="${product.title}" />
             </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
@@ -225,7 +225,7 @@ function renderVrvSection(products, sectionId) {
         <div class="vrv-item">
           <div class="vrv-sh">
             <div style="text-align: center">
-              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+              <img src="${product.imageUrl}" class="img-fluid" alt="${product.title}" />
             </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
@@ -245,7 +245,7 @@ function renderVrvSection(products, sectionId) {
         <div class="swiper-slide">
           <div class="vrv-item">
             <div style="text-align: center">
-              <img src="${product.imageUrl}" class="img-fluid" alt="" />
+              <img src="${product.imageUrl}" class="img-fluid" alt="${product.title}" />
             </div>
             <div class="vrvs-info">
               <h6 style="text-align: center">${product.title}</h6>
