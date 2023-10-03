@@ -753,7 +753,9 @@ section {
 
 .why-us .img-bg {
   min-height: 500px;
-  background-size: cover;
+  background-size: contain; /* Change from cover to contain */
+  background-repeat: no-repeat; /* Make sure it doesn't repeat */
+  background-position: center; /* Center the background */
 }
 
 .why-us .slides {
@@ -2806,10 +2808,10 @@ section {
 
 .social-icon {
   display: inline-block;
-  margin-right: 20px; 
+  margin-right: 20px;
   text-decoration: none;
-  color: #333; 
-  font-size: 16px; 
+  color: #333;
+  font-size: 16px;
 }
 
 /* Media query for responsiveness */
@@ -2823,7 +2825,7 @@ section {
 @media screen and (max-width: 320px) {
   .social-icon {
     margin-right: 10px;
-    font-size: 1px; 
+    font-size: 1px;
   }
 
   .blog .blog-details .content blockquote p {
