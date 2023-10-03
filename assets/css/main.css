@@ -97,7 +97,6 @@ section {
   margin-bottom: 0;
 }
 
-
 /* Typewriter Font */
 .hero .hero-subtitle {
   color: #43aee0;
@@ -175,7 +174,7 @@ section {
   inset: 0;
 }
 
-.breadcrumbs h2 {
+.breadcrumbs h1 {
   font-size: 56px;
   font-weight: 500;
   color: #fff;
@@ -664,7 +663,7 @@ section {
   z-index: 1;
 }
 
-.hero h1{
+.hero h1 {
   font-size: inherit; /* Inherit the font size from its parent */
   font-weight: inherit; /* Inherit the font weight from its parent */
   font-family: inherit; /* Inherit the font family from its parent */
@@ -1206,7 +1205,10 @@ section {
   /* background-color: #165a7c; */
 }
 
-.documentation .documentation-slider .swiper-pagination .swiper-pagination-bullet {
+.documentation
+  .documentation-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -1214,7 +1216,10 @@ section {
   border: 1px solid #4154f1;
 }
 
-.documentation .documentation-slider .swiper-pagination .swiper-pagination-bullet-active {
+.documentation
+  .documentation-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #4154f1;
 }
 /*--------------------------------------------------------------
@@ -1573,8 +1578,8 @@ section {
 .documentations .documentation-item .documentation-img {
   height: 320px;
   width: auto; */
-  /* border-radius: 50%; */
-  /* border: 4px solid #9a9494;
+/* border-radius: 50%; */
+/* border: 4px solid #9a9494;
   margin: 0 auto;
 }
 
