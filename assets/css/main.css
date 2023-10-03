@@ -2806,10 +2806,10 @@ section {
 
 .social-icon {
   display: inline-block;
-  margin-right: 20px; /* Adjust the margin as needed */
+  margin-right: 20px; 
   text-decoration: none;
-  color: #333; /* Set your desired text color */
-  font-size: 18px; /* Adjust the font size as needed */
+  color: #333; 
+  font-size: 16px; 
 }
 
 /* Media query for responsiveness */
@@ -2817,6 +2817,31 @@ section {
   .social-icon {
     font-size: 16px; /* Adjust font size for smaller screens */
     margin-right: 10px; /* Reduce margin for smaller screens */
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .social-icon {
+    margin-right: 10px;
+    font-size: 1px; 
+  }
+
+  .blog .blog-details .content blockquote p {
+    color: var(--color-default);
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .blog .blog-details .content blockquote {
+    overflow: hidden;
+    background-color: rgba(27, 47, 69, 0.06);
+    padding: 30px;
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
   }
 }
 /*--------------------------------------------------------------
