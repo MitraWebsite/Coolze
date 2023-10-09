@@ -1102,6 +1102,50 @@ section {
 } */
 
 /*--------------------------------------------------------------
+# Certificate
+--------------------------------------------------------------*/
+.certificate .certificate-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure items wrap to the next line if there's not enough space */
+  gap: 20px; /* Add spacing between items */
+}
+
+.certificate-item {
+  padding: 10px; 
+  max-width: 600px; 
+}
+
+.certificate-item img {
+  opacity: 1;
+  transition: 0.3s;
+  max-width: 100%;
+  height: auto;
+}
+
+.certificate-item img:hover {
+  opacity: 0.5;
+}
+
+.certificate-section {
+  padding: 20px 0; /* Adjust the padding values as needed */
+}
+
+/* Media query for screens wider than 768px */
+@media (min-width: 768px) {
+  .certificate-item {
+    flex-basis: calc(50% - 10px); /* Adjust the width as needed (50% for two items) */
+  }
+}
+
+/* Media query for screens wider than 992px (optional, adjust as needed) */
+@media (min-width: 992px) {
+  .certificate-item {
+    flex-basis: calc(53.33% - 10px); /* Adjust the width as needed (33.33% for three items) */
+  }
+}
+/*--------------------------------------------------------------
 # Brand
 --------------------------------------------------------------*/
 .brands .brands-slider .swiper-slide img {
